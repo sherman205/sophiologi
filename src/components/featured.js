@@ -2,13 +2,13 @@ import React, { Component } from "react"
 import styled from "styled-components"
 import { media } from "../styles/media";
 
-const SymbolsContainer = styled.div`
+const FeaturedContainer = styled.div`
   margin: 0 auto;
   padding: 80px 0 200px;
   max-width: 1000px;
 `;
 
-const SymbolsHeader = styled.h3`
+const FeaturedHeader = styled.h3`
   font-size: 30px;
   font-family: Source Code Pro;
   text-align: center;
@@ -52,10 +52,10 @@ const EarthLinearicon = styled(Linearicon)`
   }
 `;
 
-const Symbols = () => {
+const Featured = () => {
   return (
-    <SymbolsContainer>
-      <SymbolsHeader>Things I do</SymbolsHeader>
+    <FeaturedContainer>
+      <FeaturedHeader>Featured Projects</FeaturedHeader>
       <SymbolsIconContainer>
         <SymbolItem>
           <CodeLinearicon className="linearicons-file-code"></CodeLinearicon>
@@ -73,9 +73,9 @@ const Symbols = () => {
           <SymbolItemText>idk what's going in here yet, i'm open to ideas</SymbolItemText>
         </SymbolItem>
       </SymbolsIconContainer>
-    </SymbolsContainer>
+    </FeaturedContainer>
   );
 };
 
   
-export default Symbols;
+export default Featured;

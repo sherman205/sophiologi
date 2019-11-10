@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import styled from "styled-components"
 import { media } from "../styles/media";
+import { theme } from "../styles/theme";
 
 const IntroContainer = styled.div`
   display: flex;
@@ -14,6 +15,7 @@ const IntroContainer = styled.div`
 const IntroTopSection = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   ${media.tablet`display: block;`};
 `;
 
@@ -44,7 +46,7 @@ const IntroQuoteContainer = styled.div`
   display: flex;
   align-items: center;
   max-width: 300px;
-  background: rgb(151, 75, 41 , 0.3);
+  background: ${theme.colors.lightClay};
   margin-left: 50px;
 `;
 
@@ -60,13 +62,14 @@ const IntroQuoteAuthor = styled.div`
   padding: 10px;
 `;
 
-const Intro = () => {
+const Intro = ({ data }) => {
+  const { frontmatter } = data[0].node;
   return (
     <IntroContainer>
       <IntroTopSection>
         <IntroTextContainer>
           <IntroText>
-            Hello, I'm Sophia
+            {frontmatter.title}{frontmatter.name}
           </IntroText>
         </IntroTextContainer>
         <IntroQuoteContainer>
