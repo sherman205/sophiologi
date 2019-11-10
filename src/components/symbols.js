@@ -21,7 +21,16 @@ const SymbolsIconContainer = styled.div`
 `;
 
 const SymbolItem = styled.div`
+  text-align: center;
+  max-width: 100px;
+`;
 
+const SymbolItemHeading = styled.h4`
+
+`;
+
+const SymbolItemText = styled.p`
+  font-size: 12px;
 `;
 
 const Linearicon = styled.span`
@@ -50,12 +59,18 @@ const Symbols = () => {
       <SymbolsIconContainer>
         <SymbolItem>
           <CodeLinearicon className="linearicons-file-code"></CodeLinearicon>
+          <SymbolItemHeading>Software</SymbolItemHeading>
+          <SymbolItemText>Backend, frontend, design, small projects on the side, you name it</SymbolItemText>
         </SymbolItem>
         <SymbolItem>
           <EarthLinearicon className="linearicons-earth"></EarthLinearicon>
+          <SymbolItemHeading>Language</SymbolItemHeading>
+          <SymbolItemText>Linguistics of all kinds, some foreign language included woooo</SymbolItemText>
         </SymbolItem>
         <SymbolItem>
           <CodeLinearicon className="linearicons-file-code"></CodeLinearicon>
+          <SymbolItemHeading>Software</SymbolItemHeading>
+          <SymbolItemText>idk what's going in here yet, i'm open to ideas</SymbolItemText>
         </SymbolItem>
       </SymbolsIconContainer>
     </SymbolsContainer>
