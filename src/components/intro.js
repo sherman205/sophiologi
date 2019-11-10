@@ -1,37 +1,51 @@
 import React, { Component } from "react"
 import styled from "styled-components"
+import { media } from "../styles/media";
 
 const IntroContainer = styled.div`
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin: 0 auto;
-  padding: 80px 0;
+  padding: 80px 0 200px;
   max-width: 1000px;
+`;
+
+const IntroTopSection = styled.div`
+  display: flex;
+  align-items: center;
+  ${media.tablet`display: block;`};
 `;
 
 const IntroTextContainer = styled.div`
   padding: 10px;
-  width: 60%;
-  max-width: 480px;
+  max-width: 500px;
 `;
 
 const IntroText = styled.h1`
-
+  font-size: 60px;
 `;
 
-const IntroNounsContainer = styled.ul`
+const IntroNounsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const IntroNounsList = styled.ul`
   list-style: none;
 `;
 
 const IntroNounItem = styled.li`
-
+  text-transform: uppercase;
+  font-size: 20px;
 `;
 
 const IntroQuoteContainer = styled.div`
   display: flex;
   align-items: center;
-  width: 40%;
   max-width: 300px;
   background: rgb(151, 75, 41 , 0.3);
+  margin-left: 50px;
 `;
 
 const IntroQuoteText = styled.div`
@@ -47,19 +61,13 @@ const IntroQuoteAuthor = styled.div`
 `;
 
 const Intro = () => {
-  
-    return (
-      <IntroContainer>
+  return (
+    <IntroContainer>
+      <IntroTopSection>
         <IntroTextContainer>
           <IntroText>
             Hello, I'm Sophia
           </IntroText>
-          <IntroNounsContainer>
-            <IntroNounItem>Fullstack Developer</IntroNounItem>
-            <IntroNounItem>Linguist</IntroNounItem>
-            <IntroNounItem>World Traveler</IntroNounItem>
-            <IntroNounItem>Cat Lover</IntroNounItem>
-          </IntroNounsContainer>
         </IntroTextContainer>
         <IntroQuoteContainer>
           <IntroQuoteText>
@@ -67,8 +75,17 @@ const Intro = () => {
             <IntroQuoteAuthor>- Robin Williams</IntroQuoteAuthor>
           </IntroQuoteText>
         </IntroQuoteContainer>
-      </IntroContainer>
-    );
+      </IntroTopSection>
+      <IntroNounsContainer>
+        <IntroNounsList>
+        <IntroNounItem>Fullstack Developer</IntroNounItem>
+        <IntroNounItem>Linguist</IntroNounItem>
+        <IntroNounItem>World Traveler</IntroNounItem>
+        <IntroNounItem>Cat Lover</IntroNounItem>
+        </IntroNounsList>
+      </IntroNounsContainer>
+    </IntroContainer>
+  );
 };
 
   

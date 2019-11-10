@@ -23,7 +23,7 @@ module.exports = {
         short_name: `Sophiologi`,
         start_url: `/`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`,
+        icon: `src/images/logo.png`,
       },
     },
   ],
