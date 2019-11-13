@@ -24,8 +24,19 @@ const IntroTextContainer = styled.div`
   max-width: 500px;
 `;
 
-const IntroText = styled.h1`
+const IntroText = styled.div`
+  display: flex;
+  align-items: baseline;
+`;
+
+const IntroTextTitle = styled.h3`
+  font-size: 30px;
+  padding: 10px;
+`;
+
+const IntroTextName = styled.h1`
   font-size: 60px;
+  color: ${theme.colors.Clay};
 `;
 
 const IntroNounsContainer = styled.div`
@@ -69,22 +80,20 @@ const Intro = ({ data }) => {
       <IntroTopSection>
         <IntroTextContainer>
           <IntroText>
-            {frontmatter.title}{frontmatter.name}
+            <IntroTextTitle>{frontmatter.title}</IntroTextTitle>
+            <IntroTextName>{frontmatter.name}</IntroTextName>
           </IntroText>
         </IntroTextContainer>
         <IntroQuoteContainer>
           <IntroQuoteText>
-            "No matter what people tell you, words and ideas can change the world."
-            <IntroQuoteAuthor>- Robin Williams</IntroQuoteAuthor>
+            "{frontmatter.quote}"
+            <IntroQuoteAuthor>- {frontmatter.quoteAuthor}</IntroQuoteAuthor>
           </IntroQuoteText>
         </IntroQuoteContainer>
       </IntroTopSection>
       <IntroNounsContainer>
         <IntroNounsList>
-        <IntroNounItem>Fullstack Developer</IntroNounItem>
-        <IntroNounItem>Linguist</IntroNounItem>
-        <IntroNounItem>World Traveler</IntroNounItem>
-        <IntroNounItem>Cat Lover</IntroNounItem>
+          {frontmatter.nouns && frontmatter.nouns.map((noun, i) => <IntroNounItem key={i}>{noun}</IntroNounItem>)}
         </IntroNounsList>
       </IntroNounsContainer>
     </IntroContainer>

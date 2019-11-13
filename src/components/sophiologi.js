@@ -9,7 +9,7 @@ const SophiologiContainer = styled.div`
   margin-left: 50px;
   bottom: 0;
   margin-bottom: 120px;
-  ${media.desktop`left: 25px;`};
+  ${media.desktop`margin-left: 20px;`};
   ${media.tablet`display: none;`};
 `;
 
