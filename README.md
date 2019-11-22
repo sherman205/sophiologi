@@ -32,7 +32,7 @@
 
 | Color          | Hex                                                                |
 | -------------- | ------------------------------------------------------------------ |
-| Light Grey     | ![#C0BFC0](https://via.placeholder.com/10/afa5c6?text=+) `#C0BFC0` |
-| Pink Brown     | ![#A07470](https://via.placeholder.com/10/e7e3ed?text=+) `#A07470` |
-| Clay           | ![#974B29](https://via.placeholder.com/10/212121?text=+) `#974B29` |
+| Light Grey     | ![#C0BFC0](https://via.placeholder.com/10/C0BFC0?text=+) `#C0BFC0` |
+| Pink Brown     | ![#A07470](https://via.placeholder.com/10/A07470?text=+) `#A07470` |
+| Clay           | ![#974B29](https://via.placeholder.com/10/974B29?text=+) `#974B29` |
 
