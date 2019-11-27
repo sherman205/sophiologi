@@ -63,10 +63,10 @@ class Nav extends Component {
                     <NavLink to="/">Home</NavLink>
                   </NavListItem>
                   <NavListItem>
-                    <NavLink to="/page-2/">About</NavLink>
+                    <NavLink to="/about">About</NavLink>
                   </NavListItem>
                   <NavListItem>
-                    <NavLink to="/page-2/">Portfolio</NavLink>
+                    <NavLink to="/about">Portfolio</NavLink>
                   </NavListItem>
               </NavList>
             </NavLinks>

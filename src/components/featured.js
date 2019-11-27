@@ -36,7 +36,8 @@ const Project = styled.div`
 `;
 
 const ProjectInfo = styled.div`
-  padding: 50px 40px;
+  padding: 20px 40px;
+  width: 700px;
   align-self: flex-start;
 `;
 
@@ -49,6 +50,8 @@ const Description = styled.div`
 `;
 
 const Tech = styled.ul`
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 200px));
   list-style: none;
   padding: 5px;
 `;
@@ -56,13 +59,13 @@ const Tech = styled.ul`
 const TechItem = styled.li`
   margin: 10px;
   padding: 10px;
-  width: 50px;
+  width: 70px;
   text-align: center;
   background: ${theme.colors.lightClay};
 `;
 
 const ProjectPreview = styled.div`
-  width: 2000px;
+  width: 1000px;
   ${media.tablet`width: 400px;`};
 `;
 
@@ -98,9 +101,6 @@ const Featured = ( {data} ) => {
             </Project>
           );
         })}
-        <Project>
-          Dashboard
-        </Project>
       </FeaturedProjectsContainer>
     </FeaturedContainer>
   );

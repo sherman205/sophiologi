@@ -1,0 +1,13 @@
+---
+date: '2'
+title: 'Quality Dashboard'
+preview: './dashboard.png'
+tech:
+  - Python
+  - Flask
+  - React
+  - CSS
+  - D3
+  - Jira API
+---
+A simple dashboard that uses D3 visualizations to display code quality and coverage of two repos integral to the Journi health mobile app. View latest performance metrics as well as cloverage and jest code coverage statistics.
