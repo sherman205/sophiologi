@@ -2,6 +2,8 @@
 date: '1'
 title: 'Lapa'
 preview: './lapa.jpg'
+github: 'https://github.com/sherman205/lapa'
+live: 'https://www.lapa-eats.com/'
 tech:
   - React
   - SCSS

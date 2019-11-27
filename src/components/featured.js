@@ -1,6 +1,8 @@
 import React, { Component } from "react"
 import Img from "gatsby-image"
+import { Link } from "gatsby"
 import styled from "styled-components"
+import Octicon, {MarkGithub, LinkExternal} from '@primer/octicons-react'
 import { media } from "../styles/media";
 import { theme } from "../styles/theme";
 
@@ -74,13 +76,34 @@ const TechItem = styled.li`
   ${media.tablet`margin: 2px;`};
 `;
 
-const ProjectPreview = styled.div`
+const RightPane = styled.div`
+  display: flex;
+  flex-direction: column;
   width: 1000px;
+  height: 100%;
   ${media.tablet`width: 100%;`};
+`;
+
+const ProjectPreview = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 `;
 
 const Screenshot = styled(Img)`
   opacity: 0.6;
+`;
+
+const ProjectLinks = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px;
+`;
+
+const ProjectLinkItem = styled.a`
+  padding: 10px;
+  color: black;
 `;
 
 const Featured = ( {data} ) => {
@@ -91,7 +114,8 @@ const Featured = ( {data} ) => {
       <FeaturedProjectsContainer>
         {data.map(({ node }, i) => {
           const { frontmatter, html } = node;
-          const { title, tech, preview } = frontmatter;
+          const { title, tech, preview, github, live } = frontmatter;
+          console.log(frontmatter);
           return (
             <Project key={i}>
               <ProjectInfo>
@@ -105,9 +129,31 @@ const Featured = ( {data} ) => {
                   </Tech>
                 )}
               </ProjectInfo>
-              <ProjectPreview>
-                <Screenshot fluid={preview.childImageSharp.fluid} />
-              </ProjectPreview>
+              <RightPane>
+                <ProjectLinks>
+                  {github && (
+                    <ProjectLinkItem
+                      href={github}
+                      target="_blank"
+                      rel="nofollow noopener noreferrer"
+                      aria-label="github link">
+                      <Octicon icon={MarkGithub} size='medium'/>
+                    </ProjectLinkItem>
+                  )}         
+                  {live && (
+                    <ProjectLinkItem
+                      href={live}
+                      target="_blank"
+                      rel="nofollow noopener noreferrer"
+                      aria-label="external link">
+                      <Octicon icon={LinkExternal} size='medium'/>
+                    </ProjectLinkItem>
+                  )}
+                </ProjectLinks>
+                <ProjectPreview>
+                  <Screenshot fluid={preview.childImageSharp.fluid} />
+                </ProjectPreview>
+              </RightPane>
             </Project>
           );
         })}

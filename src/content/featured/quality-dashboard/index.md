@@ -2,6 +2,8 @@
 date: '2'
 title: 'Quality Dashboard'
 preview: './dashboard.png'
+github: 'https://github.com/sherman205/quality-dashboard'
+live: ''
 tech:
   - Python
   - Flask

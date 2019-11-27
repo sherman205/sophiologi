@@ -52,6 +52,8 @@ export const query = graphql`
               }
             }
             tech
+            github
+            live
           }
         }
       }
