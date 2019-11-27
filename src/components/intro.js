@@ -10,6 +10,7 @@ const IntroContainer = styled.div`
   margin: 0 auto;
   padding: 80px 0 200px;
   max-width: 1000px;
+  ${media.tablet`padding: 20px 0 50px;`};
 `;
 
 const IntroTopSection = styled.div`

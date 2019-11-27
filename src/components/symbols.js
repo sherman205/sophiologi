@@ -6,6 +6,7 @@ const SymbolsContainer = styled.div`
   margin: 0 auto;
   padding: 80px 0 200px;
   max-width: 1000px;
+  ${media.tablet`padding: 20px 0 50px;`};
 `;
 
 const SymbolsHeader = styled.h3`
@@ -13,20 +14,22 @@ const SymbolsHeader = styled.h3`
   font-family: Source Code Pro;
   text-align: center;
   padding: 20px;
+  ${media.tablet`font-size: 20px;`};
 `;
 
 const SymbolsIconContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
+  ${media.tablet`display: block;`};
 `;
 
 const SymbolItem = styled.div`
   text-align: center;
   max-width: 100px;
+  ${media.tablet`margin: 0 auto;`};
 `;
 
 const SymbolItemHeading = styled.h4`
-
 `;
 
 const SymbolItemText = styled.p`

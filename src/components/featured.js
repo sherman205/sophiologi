@@ -15,6 +15,7 @@ const FeaturedHeader = styled.h3`
   font-family: Source Code Pro;
   text-align: center;
   padding: 20px;
+  ${media.tablet`font-size: 20px;`};
 `;
 
 const FeaturedProjectsContainer = styled.div`
@@ -39,14 +40,17 @@ const ProjectInfo = styled.div`
   padding: 20px 40px;
   width: 700px;
   align-self: flex-start;
+  ${media.tablet`width: 200px;`};
 `;
 
 const Title = styled.h3`
   font-size: 40px;
+  ${media.tablet`font-size: 15px;`};
 `;
 
 const Description = styled.div`
   font-family: Source Code Pro;
+  ${media.tablet`font-size: 10px;`};
 `;
 
 const Tech = styled.ul`
@@ -54,6 +58,8 @@ const Tech = styled.ul`
   grid-template-columns: repeat(2, minmax(140px, 200px));
   list-style: none;
   padding: 5px;
+  ${media.tablet`padding: 0;`};
+  ${media.tablet`grid-template-columns: repeat(2, minmax(20px, 80px));`};
 `;
 
 const TechItem = styled.li`
@@ -62,11 +68,15 @@ const TechItem = styled.li`
   width: 70px;
   text-align: center;
   background: ${theme.colors.lightClay};
+  ${media.tablet`font-size: 10px;`};
+  ${media.tablet`width: 50px;`};
+  ${media.tablet`padding: 2px;`};
+  ${media.tablet`margin: 2px;`};
 `;
 
 const ProjectPreview = styled.div`
   width: 1000px;
-  ${media.tablet`width: 400px;`};
+  ${media.tablet`width: 100%;`};
 `;
 
 const Screenshot = styled(Img)`

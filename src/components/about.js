@@ -12,6 +12,7 @@ const AboutContainer = styled.div`
   padding: 10px 0 200px;
   height: calc(100vh - 502px);
   max-width: 1000px;
+  ${media.tablet`height: 100vh;`};
 `;
 
 const AboutHeader = styled.h3`
@@ -23,17 +24,21 @@ const AboutHeader = styled.h3`
 
 const AboutContent = styled.div`
   display: flex;
+  ${media.tablet`display: block;`};
+  ${media.tablet`padding: 10px;`};
 `;
 
 const Image = styled(Img)`
   opacity: 0.6;
   width: 50%;
+  ${media.tablet`width: 100%;`};
 `;
 
 const AboutText = styled.div`
   padding: 50px;
   width: 75%;
   font-size: 15px;
+  line-height: 20px;
 `;
 
 const About = ({ data }) => {
