@@ -1,14 +1,39 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql } from 'gatsby'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import About from "../components/about"
 
-const About = () => (
+const AboutPage = ( {data} ) => (
   <Layout>
     <SEO title="About" />
-    <h1>About me</h1>
+    <About data={data.about.edges}/>
   </Layout>
 )
 
-export default About
+export default AboutPage;
+
+export const query = graphql`
+  {
+    about: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/about/" } }
+    ) {
+      edges {
+        node {
+          html
+          frontmatter {
+            title
+            image {
+              childImageSharp {
+                fluid(maxWidth: 700, quality: 90) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
