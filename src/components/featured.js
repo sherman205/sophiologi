@@ -112,7 +112,6 @@ const ProjectLinkItem = styled.a`
 `;
 
 const Featured = ( {data} ) => {
-  console.log(data);
   return (
     <FeaturedContainer>
       <FeaturedHeader>Featured Projects</FeaturedHeader>
@@ -120,7 +119,6 @@ const Featured = ( {data} ) => {
         {data.map(({ node }, i) => {
           const { frontmatter, html } = node;
           const { title, tech, preview, github, live } = frontmatter;
-          console.log(frontmatter);
           return (
             <Project key={i}>
               <ProjectInfo>
