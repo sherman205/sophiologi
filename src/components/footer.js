@@ -1,11 +1,12 @@
 import React, { Component } from "react"
 import styled from "styled-components"
 import { media } from "../styles/media";
+import { theme } from "../styles/theme";
 
 const FooterContainer = styled.footer`
   display: flex;
   padding: 15px;
-  background-color: black;
+  background-color: ${theme.colors.brown};
   color: white;
   justify-content: center;
   align-items: center;

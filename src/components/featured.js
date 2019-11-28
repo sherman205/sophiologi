@@ -102,7 +102,8 @@ const ProjectLinks = styled.div`
   display: flex;
   justify-content: flex-end;
   padding: 5px;
-  ${media.tablet`justify-content: center;`};
+  ${media.tablet`justify-content: flex-start;`};
+  ${media.tablet`padding-left: 30px;`};
 `;
 
 const ProjectLinkItem = styled.a`
