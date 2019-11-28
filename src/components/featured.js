@@ -43,6 +43,7 @@ const ProjectInfo = styled.div`
   width: 700px;
   align-self: flex-start;
   ${media.tablet`width: 200px;`};
+  ${media.tablet`padding-bottom: 0;`};
 `;
 
 const Title = styled.h3`
@@ -89,6 +90,8 @@ const ProjectPreview = styled.div`
   flex-direction: column;
   justify-content: center;
   height: 100%;
+  ${media.tablet`height: 180px;`};
+  ${media.tablet`justify-content: flex-start;`};
 `;
 
 const Screenshot = styled(Img)`
@@ -99,6 +102,7 @@ const ProjectLinks = styled.div`
   display: flex;
   justify-content: flex-end;
   padding: 5px;
+  ${media.tablet`justify-content: center;`};
 `;
 
 const ProjectLinkItem = styled.a`

@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import styled from "styled-components"
+import { media } from "../styles/media";
 
 const FooterContainer = styled.footer`
   display: flex;
@@ -12,6 +13,8 @@ const FooterContainer = styled.footer`
   min-height: 70px;
   font-family: Source Code Pro;
   font-size: 15px;
+  ${media.tablet`font-size: 10px;`};
+  ${media.tablet`min-height: 20px;`};
 `;
 
 const Footer = () => (

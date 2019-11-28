@@ -37,7 +37,7 @@ const IntroTextTitle = styled.h3`
 
 const IntroTextName = styled.h1`
   font-size: 60px;
-  color: ${theme.colors.Clay};
+  color: ${theme.colors.clay};
 `;
 
 const IntroNounsContainer = styled.div`

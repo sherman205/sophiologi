@@ -30,6 +30,7 @@ const AboutContent = styled.div`
 
 const Image = styled(Img)`
   opacity: 0.6;
+  z-index: -1;
   width: 50%;
   ${media.tablet`width: 100%;`};
 `;
