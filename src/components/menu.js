@@ -13,7 +13,7 @@ const StyledContainer = styled.div`
   width: 100%;
   height: 100vh;
   outline: 0;
-  transition: 'all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1)';
+  transition: all .25s ease;
   transform: translateX(${props => (props.menuOpen ? 0 : 100)}vw);
   visibility: ${props => (props.menuOpen ? 'visible' : 'hidden')};
   display: none;
@@ -25,7 +25,6 @@ const Sidebar = styled.aside`
   align-items: center;
   z-index: 10;
   flex-direction: column;
-  transition: transform .5s cubic-bezier(0, .5, 0, 1);
   background-color: ${theme.colors.pinkBrown};
   box-shadow: -10px 0px 30px -15px ${theme.colors.pinkBrown};
   padding: 50px;
@@ -82,14 +81,7 @@ const Menu = ({ menuOpen, toggleMenu }) => {
   const handleMenuClick = e => {
     const target = e.target;
     const isLink = target.hasAttribute('href');
-    // const isNotMenu = target.classList && target.classList[0].includes('StyledContainer');
-    const isNotMenu = true;
-    console.log(target)
-    console.log(isLink)
-    console.log(isNotMenu)
-    console.log(target.classList[0])
-    console.log(e.target.className)
-    if (isLink || isNotMenu) {
+    if (isLink || target.closest('HamburgerInner')) {
       toggleMenu();
     }
   };

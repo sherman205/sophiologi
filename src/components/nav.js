@@ -76,7 +76,7 @@ const HamburgerBox = styled.div`
 
 const HamburgerInner = styled.div`
   z-index: 20;
-  background-color: ${theme.colors.white};
+  background-color: ${props => (props.menuOpen ? `${theme.colors.white}` : `${theme.colors.pinkBrown}`)};
   position: absolute;
   width:30px;
   height: 2px;
@@ -95,7 +95,7 @@ const HamburgerInner = styled.div`
   &:after {
     content: '';
     display: block;
-    background-color: ${theme.colors.white};
+    background-color: ${props => (props.menuOpen ? `${theme.colors.white}` : `${theme.colors.pinkBrown}`)};
     position: absolute;
     left: auto;
     right: 0;

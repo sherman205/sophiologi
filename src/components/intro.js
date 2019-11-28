@@ -28,16 +28,20 @@ const IntroTextContainer = styled.div`
 const IntroText = styled.div`
   display: flex;
   align-items: baseline;
+  ${media.tablet`align-items: center;`};
 `;
 
 const IntroTextTitle = styled.h3`
   font-size: 30px;
   padding: 10px;
+  ${media.tablet`font-size: 25px;`};
+  ${media.tablet`padding: 0px;`};
 `;
 
 const IntroTextName = styled.h1`
   font-size: 60px;
   color: ${theme.colors.clay};
+  ${media.tablet`font-size: 50px;`};
 `;
 
 const IntroNounsContainer = styled.div`
@@ -60,12 +64,16 @@ const IntroQuoteContainer = styled.div`
   max-width: 300px;
   background: ${theme.colors.lightClay};
   margin-left: 50px;
+  ${media.tablet`max-width: 200px;`};
+  ${media.tablet`margin-left: auto;`};
+  ${media.tablet`margin-right: auto;`};
 `;
 
 const IntroQuoteText = styled.div`
   font-family: Source Code Pro;
   padding: 10px;
   text-align: center;
+  ${media.tablet`font-size: 15px;`};
 `;
 
 const IntroQuoteAuthor = styled.div`
