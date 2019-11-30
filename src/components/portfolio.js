@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import { Link } from "gatsby"
 import styled from "styled-components"
 import { media } from "../styles/media"
 import { theme } from "../styles/theme"
@@ -68,10 +69,12 @@ const Portfolio = () => {
       <PortfolioHeader>Portfolio</PortfolioHeader>
       <ImageContainer>
         <ImageRow>
-          <ImageColumn>
-            <TopicText>Software</TopicText>
-            <Topic src={CodeImg} />
-          </ImageColumn>
+          <Link to="/portfolio/software">
+            <ImageColumn>
+              <TopicText>Software</TopicText>
+              <Topic src={CodeImg} />
+            </ImageColumn>
+          </Link>
         </ImageRow>
         <ImageRow>
           <ImageColumn>
