@@ -3,11 +3,12 @@ import { graphql } from 'gatsby'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Portfolio from "../components/portfolio"
 
 const PortfolioPage = ( {data} ) => (
   <Layout>
     <SEO title="Portfolio" />
-    {/* <About data={data.about.edges}/> */}
+    <Portfolio />
   </Layout>
 )
 
