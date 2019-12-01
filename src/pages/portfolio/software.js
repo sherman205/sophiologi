@@ -29,7 +29,7 @@ const SoftwarePage = ( {data} ) => (
     <SoftwareContainer>
       <SoftwareHeader>Software</SoftwareHeader>
       <Experience data={data.experience.edges} />
-      <Projects />
+      <Projects data={data.featured.edges}/>
     </SoftwareContainer>
   </Layout>
 )
@@ -49,6 +49,22 @@ export const query = graphql`
             position
             date
             description
+          }
+        }
+      }
+    }
+    featured: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/featured/" } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
+      edges {
+        node {
+          html
+          frontmatter {
+            title
+            tech
+            github
+            live
           }
         }
       }

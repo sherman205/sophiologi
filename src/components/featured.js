@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import Img from "gatsby-image"
-import { Link } from "gatsby"
 import styled from "styled-components"
 import Octicon, {MarkGithub, LinkExternal} from '@primer/octicons-react'
 import { media } from "../styles/media";
