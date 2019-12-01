@@ -32,7 +32,7 @@ const ProjectLinks = styled.div`
 
 const ProjectLinkItem = styled.a`
   color: black;
-  padding-right: 5px;
+  padding: 5px;
 `;
 
 const Title = styled.h3`

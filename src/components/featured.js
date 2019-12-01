@@ -111,11 +111,14 @@ const ProjectLinkItem = styled.a`
 `;
 
 const Featured = ( {data} ) => {
+  console.log(data)
+  const featuredProjects = data.filter(({ node }) => node.frontmatter.featured === 'true');
+  console.log(featuredProjects)
   return (
     <FeaturedContainer>
       <FeaturedHeader>Featured Projects</FeaturedHeader>
       <FeaturedProjectsContainer>
-        {data.map(({ node }, i) => {
+        {featuredProjects && featuredProjects.map(({ node }, i) => {
           const { frontmatter, html } = node;
           const { title, tech, preview, github, live } = frontmatter;
           return (
