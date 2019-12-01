@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import { Link } from "gatsby"
 import styled from "styled-components"
 import { media } from "../styles/media";
 
@@ -27,6 +28,11 @@ const SymbolItem = styled.div`
   text-align: center;
   max-width: 100px;
   ${media.tablet`margin: 0 auto;`};
+`;
+
+const SymbolItemLink = styled(Link)`
+  text-decoration: none;
+  color: black;
 `;
 
 const SymbolItemHeading = styled.h4`
@@ -60,11 +66,13 @@ const Symbols = () => {
     <SymbolsContainer>
       <SymbolsHeader>Things I do</SymbolsHeader>
       <SymbolsIconContainer>
-        <SymbolItem>
-          <CodeLinearicon className="linearicons-file-code"></CodeLinearicon>
-          <SymbolItemHeading>Software</SymbolItemHeading>
-          <SymbolItemText>Backend, frontend, design, small projects on the side, you name it</SymbolItemText>
-        </SymbolItem>
+        <SymbolItemLink to="/portfolio/software">
+          <SymbolItem>
+            <CodeLinearicon className="linearicons-file-code"></CodeLinearicon>
+            <SymbolItemHeading>Software</SymbolItemHeading>
+            <SymbolItemText>Backend, frontend, design, small projects on the side, you name it</SymbolItemText>
+          </SymbolItem>
+        </SymbolItemLink>
         <SymbolItem>
           <EarthLinearicon className="linearicons-earth"></EarthLinearicon>
           <SymbolItemHeading>Language</SymbolItemHeading>

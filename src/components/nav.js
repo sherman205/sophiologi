@@ -2,8 +2,8 @@ import React, { Component } from "react"
 import { Link } from "gatsby"
 import Helmet from 'react-helmet';
 import styled from "styled-components"
-import { media } from "../styles/media";
-import { theme } from "../styles/theme";
+import { media } from "../styles/media"
+import { theme } from "../styles/theme"
 import Logo from "./logo"
 import Menu from "./menu"
 

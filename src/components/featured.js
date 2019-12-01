@@ -3,7 +3,6 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 import GithubIcon from './icons/github'
 import ExternalIcon from './icons/external'
-import Octicon, {MarkGithub, LinkExternal} from '@primer/octicons-react'
 import { media } from "../styles/media";
 import { theme } from "../styles/theme";
 
@@ -30,11 +29,11 @@ const FeaturedProjectsContainer = styled.div`
 const Project = styled.div`
   display: flex;
   align-items: center;
-  border: 1px solid black;
   width: 100%;
   height: 500px;
   margin: 10px;
   padding: 10px;
+  box-shadow: 0 10px 30px -15px ${theme.colors.lightClay};
   ${media.tablet`display: block;`};
   ${media.tablet`align-items: center;`};
 `;
@@ -117,9 +116,7 @@ const ProjectLinkItem = styled.a`
 `;
 
 const Featured = ( {data} ) => {
-  console.log(data)
   const featuredProjects = data.filter(({ node }) => node.frontmatter.featured === 'true');
-  console.log(featuredProjects)
   return (
     <FeaturedContainer>
       <FeaturedHeader>Featured Projects</FeaturedHeader>

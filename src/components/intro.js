@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import styled from "styled-components"
-import { media } from "../styles/media";
-import { theme } from "../styles/theme";
+import { media } from "../styles/media"
+import { theme } from "../styles/theme"
 
 const IntroContainer = styled.div`
   display: flex;

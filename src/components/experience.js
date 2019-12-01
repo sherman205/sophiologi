@@ -23,7 +23,7 @@ const Position = styled.span`
 `;
 
 const MyTimeline = styled(Timeline)`
-  // margin: 0 !important;
+  z-index: -1 !important;
 `;
 
 const Experience = ( {data} ) => {

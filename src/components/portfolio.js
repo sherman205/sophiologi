@@ -28,7 +28,7 @@ const ImageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px;
+  padding-top: 50px;
 `;
 
 const ImageRow = styled.div`
@@ -50,11 +50,12 @@ const Topic = styled.img`
   width: 100%;
   height: auto;
   opacity: 0.6;
+  z-index: -2;
 `;
 
 const TopicText = styled.p`
   color: black;
-  z-index: 10;
+  z-index: -1;
   position: absolute;
   margin: 0;
   padding: 10px;

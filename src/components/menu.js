@@ -35,6 +35,7 @@ const Sidebar = styled.aside`
   margin-left: 80px;
   font-family: 'Source Code Pro';
   ${media.thone`padding: 25px;`};
+  ${media.tablet`width: 80vw;`};
   ${media.phablet`width: 75vw;`};
   ${media.tiny`padding: 10px;`};
 `;
