@@ -7,6 +7,7 @@ import { theme } from "../styles/theme";
 
 const ProjectsContainer = styled.div`
   display: flex;
+  flex-direction: column;
   padding-top: 40px;
   max-width: 1000px;
 `;
@@ -16,6 +17,14 @@ const ProjectsGrid = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 15px;
   ${media.tablet`grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));`};
+`;
+
+const ProjectsHeader = styled.h3`
+  font-size: 20px;
+  font-family: Source Code Pro;
+  text-align: center;
+  padding: 20px;
+  ${media.tablet`font-size: 15px;`};
 `;
 
 const ProjectCard = styled.div`
@@ -68,6 +77,7 @@ const TechItem = styled.li`
 const Projects = ( {data} ) => {
   return (
     <ProjectsContainer>
+      <ProjectsHeader>Projects I've worked on</ProjectsHeader>
       <ProjectsGrid>
         {data.map(({ node }, i) => {
           const { frontmatter, html } = node;

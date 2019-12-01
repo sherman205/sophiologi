@@ -11,10 +11,12 @@ const PortfolioContainer = styled.div`
   flex-direction: column;
   margin: 0 auto;
   padding: 10px 0 250px;
-  height: calc(100vh - 502px);
+  height: calc(100vh - 572px);
   max-width: 1000px;
-  ${media.tablet`height: 100vh;`};
+  ${media.tablet`height: 100%;`};
   ${media.tablet`padding: 20px 0 50px;`};
+  ${media.phablet`height: 100vh;`};
+  ${media.phone`height: 100vh;`};
 `;
 
 const PortfolioHeader = styled.h3`
@@ -22,6 +24,7 @@ const PortfolioHeader = styled.h3`
   font-size: 30px;
   font-family: Source Code Pro;
   text-align: center;
+  ${media.tablet`font-size: 20px;`};
 `;
 
 const ImageContainer = styled.div`
@@ -62,6 +65,8 @@ const TopicText = styled.p`
   font-family: Source Code Pro;
   font-size: 20px;
   background-color: white;
+  ${media.tablet`padding: 5px;`};
+  ${media.tablet`font-size: 15px;`};
 `;
 
 const Portfolio = () => {

@@ -7,12 +7,11 @@ import { theme } from "../styles/theme";
 const AboutContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   margin: 0 auto;
   padding: 10px 0 200px;
-  height: calc(100vh - 502px);
+  height: calc(100vh - 522px);
   max-width: 1000px;
-  ${media.tablet`height: 100vh;`};
+  ${media.desktop`height: 100vh;`};
 `;
 
 const AboutHeader = styled.h3`
@@ -24,20 +23,47 @@ const AboutHeader = styled.h3`
 
 const AboutContent = styled.div`
   display: flex;
-  ${media.tablet`display: block;`};
+  padding: 30px;
+  ${media.desktop`display: block;`};
   ${media.tablet`padding: 10px;`};
 `;
 
 const Image = styled(Img)`
   opacity: 0.6;
   z-index: -1;
-  width: 50%;
+  width: 100%;
   ${media.tablet`width: 100%;`};
 `;
 
+const AboutTextContainer = styled.div`
+
+`;
+
+const LocationWrapper = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const Location = styled.p`
+  font-size: 20px;
+  font-family: Source Code Pro
+`;
+
+const Linearicon = styled.span`
+  &:before {
+    font-size: 30px;
+  }
+`;
+
+const PushPinLinearicon = styled(Linearicon)`
+  &:before {
+    content: "\\ea79";
+    padding: 15px;
+  }
+`;
+
 const AboutText = styled.div`
-  padding: 50px;
-  width: 75%;
+  padding: 10px 30px 10px;
   font-size: 15px;
   line-height: 20px;
 `;
@@ -50,7 +76,13 @@ const About = ({ data }) => {
       <AboutHeader>{title}</AboutHeader>
       <AboutContent>
         <Image fluid={image.childImageSharp.fluid} />
-        <AboutText dangerouslySetInnerHTML={{ __html: html }} />
+        <AboutTextContainer>
+          <LocationWrapper>
+            <PushPinLinearicon className="linearicons-pushpin2"></PushPinLinearicon>
+            <Location>Portland, OR</Location>
+          </LocationWrapper>
+          <AboutText dangerouslySetInnerHTML={{ __html: html }} />
+        </AboutTextContainer>
       </AboutContent>
     </AboutContainer>
   );
