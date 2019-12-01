@@ -9,7 +9,7 @@ const AboutContainer = styled.div`
   flex-direction: column;
   margin: 0 auto;
   padding: 10px 0 200px;
-  height: calc(100vh - 522px);
+  height: calc(100vh - 400px);
   max-width: 1000px;
   ${media.desktop`height: 100vh;`};
 `;
@@ -36,7 +36,7 @@ const Image = styled(Img)`
 `;
 
 const AboutTextContainer = styled.div`
-
+  flex-shrink: 1.5;
 `;
 
 const LocationWrapper = styled.div`
@@ -62,7 +62,7 @@ const PushPinLinearicon = styled(Linearicon)`
   }
 `;
 
-const AboutText = styled.div`
+const AboutText = styled.p`
   padding: 10px 30px 10px;
   font-size: 15px;
   line-height: 20px;

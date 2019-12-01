@@ -11,7 +11,7 @@ const PortfolioContainer = styled.div`
   flex-direction: column;
   margin: 0 auto;
   padding: 10px 0 250px;
-  height: calc(100vh - 572px);
+  height: calc(100vh - 400px);
   max-width: 1000px;
   ${media.tablet`height: 100%;`};
   ${media.tablet`padding: 20px 0 50px;`};

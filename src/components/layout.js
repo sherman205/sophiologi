@@ -5,6 +5,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Nav from "./nav"
 import Footer from "./footer"
 import Sophiologi from "./sophiologi"
+import Social from "./social"
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -21,7 +22,6 @@ const Layout = ({ children }) => {
   return (
     <>
       <Nav />
-      <Sophiologi />
       <div
         style={{
           margin: `0 auto`,
@@ -32,6 +32,8 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
       </div>
+      <Sophiologi />
+      <Social />
       <Footer />
     </>
   )

@@ -8,7 +8,7 @@ const SophiologiContainer = styled.div`
   position: fixed;
   margin-left: 50px;
   bottom: 0;
-  margin-bottom: 120px;
+  margin-bottom: 200px;
   ${media.bigDesktop`margin-left: 30px;`};
   ${media.desktop`margin-left: 20px;`};
   ${media.tablet`display: none;`};
