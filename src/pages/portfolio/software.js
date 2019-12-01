@@ -40,6 +40,7 @@ export const query = graphql`
   {
     experience: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/experience/" } }
+      sort: { fields: [frontmatter___order], order: DESC }
     ) {
       edges {
         node {

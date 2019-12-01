@@ -1,4 +1,5 @@
 ---
+order: '2'
 title: StreetShares
 location: Reston, VA
 position: Software Engineer
