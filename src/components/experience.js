@@ -10,11 +10,6 @@ const ExperienceContainer = styled.div`
   max-width: 1000px;
 `;
 
-const ExperienceHeader = styled.h3`
-  margin: 0;
-  font-size: 20px;
-`;
-
 const TitleText = styled.h3`
   padding-bottom: 5px;
 `;
@@ -27,11 +22,14 @@ const Position = styled.span`
   font-size: 15px;
 `;
 
+const MyTimeline = styled(Timeline)`
+  // margin: 0 !important;
+`;
+
 const Experience = ( {data} ) => {
   return (
     <ExperienceContainer>
-      <ExperienceHeader>Experience</ExperienceHeader>
-      <Timeline lineColor={`${theme.colors.lightGrey}`}>
+      <MyTimeline lineColor={`${theme.colors.lightGrey}`} >
         {data.map(({ node }, i) => {
           const { frontmatter } = node;
           const { title, date, location, position, description } = frontmatter;
@@ -49,7 +47,7 @@ const Experience = ( {data} ) => {
             </TimelineItem>
           );
         })}
-      </Timeline>
+      </MyTimeline>
     </ExperienceContainer>
   );
 };

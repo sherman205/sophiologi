@@ -4,6 +4,7 @@ import styled from "styled-components"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import Experience from "../../components/experience"
+import Projects from "../../components/projects"
 
 const SoftwareContainer = styled.div`
   display: flex;
@@ -28,6 +29,7 @@ const SoftwarePage = ( {data} ) => (
     <SoftwareContainer>
       <SoftwareHeader>Software</SoftwareHeader>
       <Experience data={data.experience.edges} />
+      <Projects />
     </SoftwareContainer>
   </Layout>
 )
