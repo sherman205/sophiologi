@@ -1,6 +1,8 @@
 import React, { Component } from "react"
 import Img from "gatsby-image"
 import styled from "styled-components"
+import GithubIcon from './icons/github'
+import ExternalIcon from './icons/external'
 import Octicon, {MarkGithub, LinkExternal} from '@primer/octicons-react'
 import { media } from "../styles/media";
 import { theme } from "../styles/theme";
@@ -108,6 +110,10 @@ const ProjectLinks = styled.div`
 const ProjectLinkItem = styled.a`
   padding: 10px;
   color: black;
+  svg {
+    width: 20px;
+    height: 20px;
+  }
 `;
 
 const Featured = ( {data} ) => {
@@ -142,7 +148,7 @@ const Featured = ( {data} ) => {
                       target="_blank"
                       rel="nofollow noopener noreferrer"
                       aria-label="github link">
-                      <Octicon icon={MarkGithub} size='medium'/>
+                      <GithubIcon />
                     </ProjectLinkItem>
                   )}         
                   {live && (
@@ -151,7 +157,7 @@ const Featured = ( {data} ) => {
                       target="_blank"
                       rel="nofollow noopener noreferrer"
                       aria-label="external link">
-                      <Octicon icon={LinkExternal} size='medium'/>
+                        <ExternalIcon />
                     </ProjectLinkItem>
                   )}
                 </ProjectLinks>

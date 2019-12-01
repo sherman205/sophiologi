@@ -1,5 +1,6 @@
 import React, { Component } from "react"
-import Octicon, {MarkGithub, LinkExternal} from '@primer/octicons-react'
+import GithubIcon from './icons/github'
+import ExternalIcon from './icons/external'
 import styled from "styled-components"
 import { media } from "../styles/media";
 import { theme } from "../styles/theme";
@@ -33,6 +34,10 @@ const ProjectLinks = styled.div`
 const ProjectLinkItem = styled.a`
   color: black;
   padding: 5px;
+  svg {
+    width: 20px;
+    height: 20px;
+  }
 `;
 
 const Title = styled.h3`
@@ -76,7 +81,7 @@ const Projects = ( {data} ) => {
                       target="_blank"
                       rel="nofollow noopener noreferrer"
                       aria-label="github link">
-                      <Octicon icon={MarkGithub} />
+                      <GithubIcon />
                     </ProjectLinkItem>
                   )}         
                   {live && (
@@ -85,7 +90,7 @@ const Projects = ( {data} ) => {
                       target="_blank"
                       rel="nofollow noopener noreferrer"
                       aria-label="external link">
-                      <Octicon icon={LinkExternal} />
+                      <ExternalIcon />
                     </ProjectLinkItem>
                   )}
                 </ProjectLinks>
