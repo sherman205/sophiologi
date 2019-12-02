@@ -4,6 +4,7 @@ title: StreetShares
 location: Reston, VA
 position: Software Engineer
 date: 04/2018 – 03/2019
+type: 'software'
 description:
   - Refactored and developed Python & Angular codebase in a docker environment to reduce tech debt and improve UX
   - Led team in enhancing underwriting software through story grooming and feature development

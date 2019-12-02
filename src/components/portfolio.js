@@ -83,10 +83,12 @@ const Portfolio = () => {
           </Link>
         </ImageRow>
         <ImageRow>
-          <ImageColumn>
-            <TopicText>Language</TopicText>
-            <Topic src={LanguageImg} />
-          </ImageColumn>
+          <Link to="/portfolio/language">
+            <ImageColumn>
+              <TopicText>Language</TopicText>
+              <Topic src={LanguageImg} />
+            </ImageColumn>
+          </Link>
           <ImageColumn>
             <TopicText>Misc</TopicText>
             <Topic src={LanguageImg} />

@@ -4,6 +4,7 @@ title: Red Hat
 location: McLean, VA
 position: Software Consultant
 date: 09/2016 – 04/2018
+type: 'software'
 description:
   - Worked with enterprise customers on a range of development projects, especially in an on-site capacity
   - Improved client knowledge of Red Hat technologies and other open source tools

@@ -73,11 +73,13 @@ const Symbols = () => {
             <SymbolItemText>Backend, frontend, design, small projects on the side, you name it</SymbolItemText>
           </SymbolItem>
         </SymbolItemLink>
-        <SymbolItem>
-          <EarthLinearicon className="linearicons-earth"></EarthLinearicon>
-          <SymbolItemHeading>Language</SymbolItemHeading>
-          <SymbolItemText>Linguistics of all kinds, some foreign language included woooo</SymbolItemText>
-        </SymbolItem>
+        <SymbolItemLink to="/portfolio/language">
+          <SymbolItem>
+            <EarthLinearicon className="linearicons-earth"></EarthLinearicon>
+            <SymbolItemHeading>Language</SymbolItemHeading>
+            <SymbolItemText>Linguistics of all kinds, some foreign language included woooo</SymbolItemText>
+          </SymbolItem>
+        </SymbolItemLink>
         <SymbolItem>
           <CodeLinearicon className="linearicons-file-code"></CodeLinearicon>
           <SymbolItemHeading>Software</SymbolItemHeading>

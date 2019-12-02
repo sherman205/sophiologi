@@ -6,7 +6,7 @@ import SEO from "../../components/seo"
 import Experience from "../../components/experience"
 import Projects from "../../components/projects"
 
-const SoftwareContainer = styled.div`
+const LanguageContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -15,7 +15,7 @@ const SoftwareContainer = styled.div`
   max-width: 1000px;
 `;
 
-const SoftwareHeader = styled.h3`
+const LanguageHeader = styled.h3`
   margin: 0;
   font-size: 30px;
   font-family: Source Code Pro;
@@ -23,18 +23,18 @@ const SoftwareHeader = styled.h3`
 `;
 
 
-const SoftwarePage = ( {data} ) => (
+const LanguagePage = ( {data} ) => (
   <Layout>
-    <SEO title="Software Portfolio" />
-    <SoftwareContainer>
-      <SoftwareHeader>Software</SoftwareHeader>
-      <Experience data={data.experience.edges} type="software"/>
-      <Projects data={data.featured.edges}/>
-    </SoftwareContainer>
+    <SEO title="Language Portfolio" />
+    <LanguageContainer>
+      <LanguageHeader>Language</LanguageHeader>
+      <Experience data={data.experience.edges} type="language" />
+      {/* <Projects data={data.featured.edges}/> */}
+    </LanguageContainer>
   </Layout>
 )
 
-export default SoftwarePage;
+export default LanguagePage;
 
 export const query = graphql`
   {
