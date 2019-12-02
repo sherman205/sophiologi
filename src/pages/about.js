@@ -24,6 +24,11 @@ export const query = graphql`
           html
           frontmatter {
             title
+            location
+            education
+            languages
+            quote
+            quoteAuthor
             image {
               childImageSharp {
                 fluid(maxWidth: 700, quality: 90) {

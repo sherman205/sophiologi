@@ -6,7 +6,7 @@ import { theme } from "../styles/theme";
 const SophiologiContainer = styled.div`
   width: 40px;
   position: fixed;
-  margin-left: 50px;
+  margin-left: 42px;
   bottom: 0;
   margin-bottom: 200px;
   ${media.bigDesktop`margin-left: 30px;`};
