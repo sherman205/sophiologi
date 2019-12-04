@@ -48,6 +48,11 @@ const NavLink = styled(Link)`
   text-decoration: none;
   font-family: Source Code Pro;
   color: inherit;
+  &:hover,
+  &:focus,
+  &.active {
+    color: ${theme.colors.pinkBrown};
+  }
 `;
 
 const Hamburger = styled.div`
@@ -189,13 +194,13 @@ class Nav extends Component {
               <NavLinks>
                 <NavList>
                     <NavListItem>
-                      <NavLink to="/">Home</NavLink>
+                      <NavLink exact to="/" activeClassName="active">Home</NavLink>
                     </NavListItem>
                     <NavListItem>
-                      <NavLink to="/about">About</NavLink>
+                      <NavLink exact to="/about" activeClassName="active">About</NavLink>
                     </NavListItem>
                     <NavListItem>
-                      <NavLink to="/portfolio">Portfolio</NavLink>
+                      <NavLink exact to="/portfolio" activeClassName="active">Portfolio</NavLink>
                     </NavListItem>
                 </NavList>
               </NavLinks>

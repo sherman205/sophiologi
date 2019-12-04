@@ -118,6 +118,12 @@ const ProjectLinkItem = styled.a`
     width: 20px;
     height: 20px;
   }
+  &:hover,
+  &:focus {
+    svg {
+      fill: ${theme.colors.pinkBrown};
+    }
+  }
 `;
 
 const Featured = ( {data} ) => {

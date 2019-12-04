@@ -10,6 +10,7 @@ const AboutContainer = styled.div`
   margin: 0 auto;
   padding: 10px 0 200px;
   max-width: 1000px;
+  ${media.tablet`padding: 10px 0 100px;`};
 `;
 
 const AboutHeader = styled.h3`
@@ -24,9 +25,7 @@ const AboutCard = styled.div`
   justify-content: center;
   padding: 50px;
   ${media.desktop`display: block;`};
-  ${media.desktop`margin-left: auto;`};
-  ${media.desktop`margin-right: auto;`};
-  ${media.tablet`padding: 10px;`};
+  ${media.tablet`padding: 20px;`};
 `;
 
 const QuoteContainer = styled.div`
@@ -40,6 +39,10 @@ const QuoteContainer = styled.div`
   width: 300px;
   height: 300px;
   transition: visibility 0.3s linear,opacity 0.3s linear;
+  ${media.thone`height: 250px;`};
+  ${media.thone`width: 250px;`};
+  ${media.phone`height: 200px;`};
+  ${media.phone`width: 200px;`};
 `;
 
 const Quote = styled.div`
@@ -64,6 +67,10 @@ const ImageWrapper = styled.div`
   }
   ${media.desktop`margin-left: auto;`};
   ${media.desktop`margin-right: auto;`};
+  ${media.thone`height: 250px;`};
+  ${media.thone`width: 250px;`};
+  ${media.phone`height: 200px;`};
+  ${media.phone`width: 200px;`};
 `;
 
 const Image = styled(Img)`
@@ -79,6 +86,8 @@ const QuickInfo = styled.div`
   justify-content: center;
   padding: 30px;
   ${media.desktop`padding: 30px 100px;`};
+  ${media.thone`padding: 30px 60px;`};
+  ${media.phablet`padding: 20px;`};
 `;
 
 const QuickInfoItem = styled.div`
@@ -95,11 +104,13 @@ const QuickText = styled.p`
   font-size: 15px;
   font-family: Source Code Pro
   color: ${theme.colors.pinkBrown};
+  ${media.phablet`font-size: 12px;`};
 `;
 
 const Linearicon = styled.span`
   &:before {
     font-size: 30px;
+    ${media.phone`font-size: 20px;`};
   }
 `;
 
@@ -107,6 +118,7 @@ const PushPinLinearicon = styled(Linearicon)`
   &:before {
     content: "\\ea79";
     padding: 20px;
+    ${media.phone`padding: 5px;`};
   }
 `;
 
@@ -114,6 +126,7 @@ const GradLinearicon = styled(Linearicon)`
   &:before {
     content: "\\e9da";
     padding: 20px;
+    ${media.phone`padding: 5px;`};
   }
 `;
 
@@ -121,6 +134,7 @@ const TextLinearicon = styled(Linearicon)`
   &:before {
     content: "\\eca2";
     padding: 20px;
+    ${media.phone`padding: 5px;`};
   }
 `;
 
@@ -130,6 +144,8 @@ const AboutText = styled.div`
   line-height: 20px;
   column-width: 14em;
   column-gap: 2em;
+  ${media.thone`padding: 0 60px;`};
+  ${media.phone`padding: 0 20px;`};
 `;
 
 const About = ({ data }) => {

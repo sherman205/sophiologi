@@ -74,10 +74,12 @@ const AboutButton = styled(Link)`
   padding: 20px;
   text-align: center;
   font-family: Source Code Pro;
+  transition: 0.5s;
   &:hover,
   &:focus,
   &:active {
-    background-color: ${theme.colors.lightClay};
+    border: 1px solid ${theme.colors.lightGrey};
+    color: ${theme.colors.lightGrey};
   }
   ${media.tablet`padding: 15px;`};
   ${media.phablet`font-size: 12px;`};

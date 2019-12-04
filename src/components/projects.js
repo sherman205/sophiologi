@@ -35,6 +35,11 @@ const ProjectCard = styled.div`
   padding: 2rem 1.75rem;
   border-radius: 5px;
   box-shadow: 0 10px 30px -15px ${theme.colors.lightClay};
+  transition: all 0.25s ease;
+  &:hover,
+  &:focus {
+    transform: translateY(5px);
+  }
 `;
 
 const ProjectLinks = styled.div`
@@ -48,6 +53,12 @@ const ProjectLinkItem = styled.a`
   svg {
     width: 20px;
     height: 20px;
+  }
+  &:hover,
+  &:focus {
+    svg {
+      fill: ${theme.colors.pinkBrown};
+    }
   }
 `;
 
