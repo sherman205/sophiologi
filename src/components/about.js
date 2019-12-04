@@ -39,7 +39,7 @@ const QuoteContainer = styled.div`
   background-color: white;
   width: 300px;
   height: 300px;
-  transition:visibility 0.3s linear,opacity 0.3s linear;
+  transition: visibility 0.3s linear,opacity 0.3s linear;
 `;
 
 const Quote = styled.div`
@@ -84,6 +84,11 @@ const QuickInfo = styled.div`
 const QuickInfoItem = styled.div`
   display: flex;
   align-items: center;
+  transition: all 0.25s ease;
+  &:hover,
+  &:focus {
+    transform: translateX(5px);
+  }
 `;
 
 const QuickText = styled.p`

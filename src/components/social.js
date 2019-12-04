@@ -31,6 +31,12 @@ const Icon = styled.a`
   svg {
     fill: ${theme.colors.lightGrey};
   }
+  &:hover,
+  &:focus {
+    svg {
+      fill: ${theme.colors.pinkBrown};
+    }
+  }
 `;
 
 const Social = () => {

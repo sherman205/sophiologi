@@ -34,11 +34,17 @@ const PortfolioItems = styled.div`
 
 const PortfolioFolder = styled.div`
   display: flex;
-  border: 1px solid black;
   border-radius: 5px;
   margin-bottom: 10px;
   width: 700px;
   height: 350px;
+  box-shadow: 0 10px 30px -15px ${theme.colors.lightClay};
+  transition: all 0.25s ease;
+  &:hover,
+  &:focus {
+    transform: translateX(10px);
+  }
+  ${media.desktop`width: 600px;`};
   ${media.tablet`width: 500px;`};
 `;
 

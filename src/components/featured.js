@@ -29,11 +29,12 @@ const FeaturedProjectsContainer = styled.div`
 const Project = styled.div`
   display: flex;
   align-items: center;
-  width: 100%;
+  width: 800px;
   height: 500px;
   margin: 10px;
   padding: 10px;
   box-shadow: 0 10px 30px -15px ${theme.colors.lightClay};
+  ${media.desktop`width: 75%;`};
   ${media.tablet`display: block;`};
   ${media.tablet`align-items: center;`};
 `;
@@ -47,18 +48,19 @@ const ProjectInfo = styled.div`
 `;
 
 const Title = styled.h3`
-  font-size: 40px;
+  font-size: 30px;
   ${media.tablet`font-size: 15px;`};
 `;
 
 const Description = styled.div`
   font-family: Source Code Pro;
+  ${media.desktop`font-size: 12px;`};
   ${media.tablet`font-size: 10px;`};
 `;
 
 const Tech = styled.ul`
   display: grid;
-  grid-template-columns: repeat(2, minmax(140px, 200px));
+  grid-template-columns: repeat(2, minmax(100px, 120px));
   list-style: none;
   padding: 5px;
   ${media.tablet`padding: 0;`};
@@ -70,9 +72,11 @@ const TechItem = styled.li`
   padding: 10px;
   width: 70px;
   text-align: center;
+  border-radius: 5px;
   background: ${theme.colors.lightClay};
+  ${media.desktop`font-size: 12px;`};
+  ${media.desktop`width: 50px;`};
   ${media.tablet`font-size: 10px;`};
-  ${media.tablet`width: 50px;`};
   ${media.tablet`padding: 2px;`};
   ${media.tablet`margin: 2px;`};
 `;

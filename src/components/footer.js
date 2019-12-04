@@ -40,6 +40,12 @@ const SocialLink = styled.a`
     height: 20px;
     width: 20px;
   }
+  &:hover,
+  &:focus {
+    svg {
+      fill: ${theme.colors.pinkBrown};
+    }
+  }
 `;
 
 const Footer = () => (

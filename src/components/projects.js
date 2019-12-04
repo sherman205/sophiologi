@@ -33,6 +33,7 @@ const ProjectCard = styled.div`
   justify-content: space-between;
   position: relative;
   padding: 2rem 1.75rem;
+  border-radius: 5px;
   box-shadow: 0 10px 30px -15px ${theme.colors.lightClay};
 `;
 
