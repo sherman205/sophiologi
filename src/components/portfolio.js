@@ -38,13 +38,39 @@ const PortfolioFolder = styled.div`
   border-radius: 5px;
   margin-bottom: 10px;
   width: 700px;
-  height: 400px;
+  height: 350px;
   ${media.tablet`width: 500px;`};
 `;
 
 const PortfolioLink = styled(Link)`
   text-decoration: none;
   color: black;
+`;
+
+const QuoteContainer = styled.div`
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  align-items: center;
+  border-radius: 5px;
+  position: absolute;
+  background-color: white;
+  width: 310px;
+  height: 310px;
+  transition:visibility 0.3s linear,opacity 0.3s linear;
+`;
+
+const Quote = styled.div`
+  font-family: Source Code Pro;
+  font-size: 12px;
+  padding: 10px;
+  text-align: center;
+`;
+
+const QuoteAuthor = styled.div`
+  font-size: 12px;
+  text-align: right;
+  padding: 10px;
 `;
 
 const LeftPane = styled.div`
@@ -55,6 +81,10 @@ const LeftPane = styled.div`
 const RightPane = styled.div`
   width: 50%;
   padding: 20px;
+  &:hover ${QuoteContainer} {
+    visibility: visible;
+    opacity: 1;
+  }
 `;
 
 const Topic = styled.p`
@@ -69,9 +99,10 @@ const Description = styled.div`
 
 const Image = styled(Img)`
   opacity: 0.6;
-  z-index: -1;
-  height: 100%;
-  width: 100%;
+  z-index: -2;
+  border-radius: 5px;
+  height: 310px;
+  width: 310px;
 `;
 
 const Linearicon = styled.span`
@@ -105,6 +136,12 @@ const Portfolio = ( {data} ) => {
                   <Description dangerouslySetInnerHTML={{ __html: html }} />
                 </LeftPane>
                 <RightPane>
+                  <QuoteContainer>
+                    <Quote>
+                      "{quote}"
+                      <QuoteAuthor>- {quoteAuthor}</QuoteAuthor>
+                    </Quote>
+                  </QuoteContainer>
                   <Image fluid={image.childImageSharp.fluid} />
                 </RightPane>
               </PortfolioFolder>

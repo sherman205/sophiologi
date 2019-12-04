@@ -40,9 +40,6 @@ const QuoteContainer = styled.div`
   width: 300px;
   height: 300px;
   transition:visibility 0.3s linear,opacity 0.3s linear;
-  ${media.tablet`max-width: 200px;`};
-  ${media.tablet`margin-left: auto;`};
-  ${media.tablet`margin-right: auto;`};
 `;
 
 const Quote = styled.div`

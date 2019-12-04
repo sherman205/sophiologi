@@ -10,7 +10,7 @@ const IntroContainer = styled.div`
   justify-content: center;
   flex-direction: column;
   margin: 0 auto;
-  padding: 10px 0 200px;
+  padding: 10px 0 250px;
   max-width: 1000px;
   ${media.tablet`padding: 20px 0 50px;`};
 `;
