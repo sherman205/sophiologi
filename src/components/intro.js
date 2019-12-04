@@ -57,6 +57,7 @@ const IntroNounsContainer = styled.div`
 const IntroNounsList = styled.ul`
   list-style: none;
   padding: 0;
+  ${media.tablet`padding-right: 10px;`};
 `;
 
 const IntroNounItem = styled.li`
@@ -74,10 +75,12 @@ const AboutButton = styled(Link)`
   text-align: center;
   font-family: Source Code Pro;
   &:hover,
-    &:focus,
-    &:active {
-      background-color: ${theme.colors.lightClay};
-    }
+  &:focus,
+  &:active {
+    background-color: ${theme.colors.lightClay};
+  }
+  ${media.tablet`padding: 15px;`};
+  ${media.phablet`font-size: 12px;`};
 `;
 
 const IntroQuoteContainer = styled.div`

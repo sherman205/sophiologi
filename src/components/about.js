@@ -29,9 +29,42 @@ const AboutCard = styled.div`
   ${media.tablet`padding: 10px;`};
 `;
 
+const QuoteContainer = styled.div`
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  align-items: center;
+  border-radius: 5px;
+  position: absolute;
+  background-color: white;
+  width: 300px;
+  height: 300px;
+  transition:visibility 0.3s linear,opacity 0.3s linear;
+  ${media.tablet`max-width: 200px;`};
+  ${media.tablet`margin-left: auto;`};
+  ${media.tablet`margin-right: auto;`};
+`;
+
+const Quote = styled.div`
+  font-family: Source Code Pro;
+  font-size: 12px;
+  padding: 10px;
+  text-align: center;
+`;
+
+const QuoteAuthor = styled.div`
+  font-size: 12px;
+  text-align: right;
+  padding: 10px;
+`;
+
 const ImageWrapper = styled.div`
   height: 300px;
   width: 300px;
+  &:hover ${QuoteContainer} {
+    visibility: visible;
+    opacity: 1;
+  }
   ${media.desktop`margin-left: auto;`};
   ${media.desktop`margin-right: auto;`};
 `;
@@ -39,7 +72,7 @@ const ImageWrapper = styled.div`
 const Image = styled(Img)`
   opacity: 0.6;
   border-radius: 5px;
-  z-index: -1;
+  z-index: -2;
   width: 100%;
 `;
 
@@ -59,6 +92,7 @@ const QuickInfoItem = styled.div`
 const QuickText = styled.p`
   font-size: 15px;
   font-family: Source Code Pro
+  color: ${theme.colors.pinkBrown};
 `;
 
 const Linearicon = styled.span`
@@ -104,6 +138,12 @@ const About = ({ data }) => {
       <AboutHeader>{title}</AboutHeader>
       <AboutCard>
         <ImageWrapper>
+          <QuoteContainer>
+            <Quote>
+              "{quote}"
+              <QuoteAuthor>- {quoteAuthor}</QuoteAuthor>
+            </Quote>
+          </QuoteContainer>
           <Image fluid={image.childImageSharp.fluid} />
         </ImageWrapper>
         <QuickInfo>
