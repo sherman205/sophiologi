@@ -108,6 +108,7 @@ const ProjectLinks = styled.div`
 
 const ProjectLinkItem = styled.a`
   padding: 10px;
+  border-radius: 5px;
   color: black;
   svg {
     width: 20px;

@@ -1,17 +1,15 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
+import Img from "gatsby-image"
 import styled from "styled-components"
 import { media } from "../styles/media"
 import { theme } from "../styles/theme"
-import CodeImg from "../images/code.jpg"
-import LanguageImg from "../images/language.jpg"
 
 const PortfolioContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  padding: 10px 0 250px;
-  height: calc(100vh - 400px);
+  padding: 10px 0 200px;
   max-width: 1000px;
   ${media.tablet`height: 100%;`};
   ${media.tablet`padding: 20px 0 50px;`};
@@ -27,74 +25,92 @@ const PortfolioHeader = styled.h3`
   ${media.tablet`font-size: 20px;`};
 `;
 
-const ImageContainer = styled.div`
+const PortfolioItems = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 50px;
 `;
 
-const ImageRow = styled.div`
+const PortfolioFolder = styled.div`
   display: flex;
-  max-width: 650px;
-  ${media.tablet`display: block;`};
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 700px;
+  height: 400px;
+  ${media.tablet`width: 500px;`};
 `;
 
-const ImageColumn = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  position: relative;
-`;
-
-const Topic = styled.img`
-  width: 100%;
-  height: auto;
-  opacity: 0.6;
-  z-index: -2;
-`;
-
-const TopicText = styled.p`
+const PortfolioLink = styled(Link)`
+  text-decoration: none;
   color: black;
-  z-index: -1;
-  position: absolute;
-  margin: 0;
-  padding: 10px;
-  font-family: Source Code Pro;
-  font-size: 20px;
-  background-color: white;
-  ${media.tablet`padding: 5px;`};
-  ${media.tablet`font-size: 15px;`};
 `;
 
-const Portfolio = () => {
+const LeftPane = styled.div`
+  width: 50%;
+  padding: 20px;
+`;
+
+const RightPane = styled.div`
+  width: 50%;
+  padding: 20px;
+`;
+
+const Topic = styled.p`
+  font-size: 25px;
+  padding-left: 30px;
+`;
+
+const Description = styled.div`
+  font-size: 15px;
+  padding-left: 30px;
+`;
+
+const Image = styled(Img)`
+  opacity: 0.6;
+  height: 100%;
+  width: 100%;
+`;
+
+const Linearicon = styled.span`
+  display: flex;
+  justify-content: flex-start;
+  &:before {
+    font-size: 30px;
+  }
+`;
+
+const PaperClipLinearicon = styled(Linearicon)`
+  &:before {
+    content: "\\e998";
+  }
+`;
+
+const Portfolio = ( {data} ) => {
   return (
     <PortfolioContainer>
       <PortfolioHeader>Portfolio</PortfolioHeader>
-      <ImageContainer>
-        <ImageRow>
-          <Link to="/portfolio/software">
-            <ImageColumn>
-              <TopicText>Software</TopicText>
-              <Topic src={CodeImg} />
-            </ImageColumn>
-          </Link>
-        </ImageRow>
-        <ImageRow>
-          <Link to="/portfolio/language">
-            <ImageColumn>
-              <TopicText>Language</TopicText>
-              <Topic src={LanguageImg} />
-            </ImageColumn>
-          </Link>
-          <ImageColumn>
-            <TopicText>Misc</TopicText>
-            <Topic src={LanguageImg} />
-          </ImageColumn>
-        </ImageRow>
-      </ImageContainer>
+      <PortfolioItems>
+        {data.map(({ node }, i) => {
+          const { frontmatter, html } = node;
+          const { title, image, quote, quoteAuthor } = frontmatter;
+          return (
+            <PortfolioLink to={`/portfolio/${title.toLowerCase()}`}>
+              <PortfolioFolder>
+                <LeftPane>
+                  <PaperClipLinearicon className="linearicons-paperclip"></PaperClipLinearicon>
+                  <Topic>{title}</Topic>
+                  <Description dangerouslySetInnerHTML={{ __html: html }} />
+                </LeftPane>
+                <RightPane>
+                  <Image fluid={image.childImageSharp.fluid} />
+                </RightPane>
+              </PortfolioFolder>
+            </PortfolioLink>
+          );
+        })}
+      </PortfolioItems>
     </PortfolioContainer>
   );
 };
