@@ -1,14 +1,16 @@
 import React, { Component } from "react"
+import { Link } from "gatsby"
 import styled from "styled-components"
 import { media } from "../styles/media"
 import { theme } from "../styles/theme"
 
 const IntroContainer = styled.div`
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
-  justify-content: space-between;
   margin: 0 auto;
-  padding: 80px 0 200px;
+  padding: 10px 0 200px;
   max-width: 1000px;
   ${media.tablet`padding: 20px 0 50px;`};
 `;
@@ -21,8 +23,8 @@ const IntroTopSection = styled.div`
 `;
 
 const IntroTextContainer = styled.div`
-  padding: 10px;
   max-width: 500px;
+  letter-spacing: 5px;
 `;
 
 const IntroText = styled.div`
@@ -33,14 +35,18 @@ const IntroText = styled.div`
 
 const IntroTextTitle = styled.h3`
   font-size: 30px;
-  padding: 10px;
+  padding-right: 10px;
   ${media.tablet`font-size: 25px;`};
 `;
 
 const IntroTextName = styled.h1`
-  font-size: 60px;
+  font-size: 80px;
   color: ${theme.colors.clay};
   ${media.tablet`font-size: 50px;`};
+`;
+
+const IntroInfo = styled.div`
+  display: flex;
 `;
 
 const IntroNounsContainer = styled.div`
@@ -50,6 +56,7 @@ const IntroNounsContainer = styled.div`
 
 const IntroNounsList = styled.ul`
   list-style: none;
+  padding: 0;
 `;
 
 const IntroNounItem = styled.li`
@@ -57,9 +64,26 @@ const IntroNounItem = styled.li`
   font-size: 20px;
 `;
 
+const AboutButton = styled(Link)`
+  margin: 30px 30px 0;
+  color: ${theme.colors.clay};
+  text-decoration: none;
+  border: 1px solid ${theme.colors.clay};
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  font-family: Source Code Pro;
+  &:hover,
+    &:focus,
+    &:active {
+      background-color: ${theme.colors.lightClay};
+    }
+`;
+
 const IntroQuoteContainer = styled.div`
   display: flex;
   align-items: center;
+  border-radius: 5px;
   max-width: 300px;
   background: ${theme.colors.lightClay};
   margin-left: 50px;
@@ -85,25 +109,26 @@ const Intro = ({ data }) => {
   const { frontmatter } = data[0].node;
   return (
     <IntroContainer>
-      <IntroTopSection>
-        <IntroTextContainer>
-          <IntroText>
-            <IntroTextTitle>{frontmatter.title}</IntroTextTitle>
-            <IntroTextName>{frontmatter.name}</IntroTextName>
-          </IntroText>
-        </IntroTextContainer>
+      <IntroTextContainer>
+        <IntroText>
+          <IntroTextTitle>{frontmatter.title}</IntroTextTitle>
+          <IntroTextName>{frontmatter.name}</IntroTextName>
+        </IntroText>
+      </IntroTextContainer>
+      <IntroInfo>
+        <IntroNounsContainer>
+          <IntroNounsList>
+            {frontmatter.nouns && frontmatter.nouns.map((noun, i) => <IntroNounItem key={i}>{noun}</IntroNounItem>)}
+          </IntroNounsList>
+          <AboutButton to="/about">More about me</AboutButton>
+        </IntroNounsContainer>
         <IntroQuoteContainer>
           <IntroQuoteText>
             "{frontmatter.quote}"
             <IntroQuoteAuthor>- {frontmatter.quoteAuthor}</IntroQuoteAuthor>
           </IntroQuoteText>
         </IntroQuoteContainer>
-      </IntroTopSection>
-      <IntroNounsContainer>
-        <IntroNounsList>
-          {frontmatter.nouns && frontmatter.nouns.map((noun, i) => <IntroNounItem key={i}>{noun}</IntroNounItem>)}
-        </IntroNounsList>
-      </IntroNounsContainer>
+      </IntroInfo>
     </IntroContainer>
   );
 };

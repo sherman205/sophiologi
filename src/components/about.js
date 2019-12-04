@@ -10,7 +10,6 @@ const AboutContainer = styled.div`
   margin: 0 auto;
   padding: 10px 0 200px;
   max-width: 1000px;
-  ${media.desktop`height: 100vh;`};
 `;
 
 const AboutHeader = styled.h3`
@@ -25,14 +24,16 @@ const AboutCard = styled.div`
   justify-content: center;
   padding: 50px;
   ${media.desktop`display: block;`};
+  ${media.desktop`margin-left: auto;`};
+  ${media.desktop`margin-right: auto;`};
   ${media.tablet`padding: 10px;`};
 `;
 
 const ImageWrapper = styled.div`
   height: 300px;
   width: 300px;
-  ${media.tablet`margin-left: auto;`};
-  ${media.tablet`margin-right: auto;`};
+  ${media.desktop`margin-left: auto;`};
+  ${media.desktop`margin-right: auto;`};
 `;
 
 const Image = styled(Img)`
@@ -47,6 +48,7 @@ const QuickInfo = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 30px;
+  ${media.desktop`padding: 30px 100px;`};
 `;
 
 const QuickInfoItem = styled.div`
