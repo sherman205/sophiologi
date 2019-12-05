@@ -9,10 +9,7 @@ const PortfolioContainer = styled.div`
   margin: 0 auto;
   padding: 10px 0 200px;
   max-width: 1000px;
-  ${media.tablet`height: 100%;`};
   ${media.tablet`padding: 20px 0 50px;`};
-  ${media.phablet`height: 100vh;`};
-  ${media.phone`height: 100vh;`};
 `;
 
 const PortfolioHeader = styled.h3`
@@ -33,7 +30,6 @@ const PortfolioItems = styled.div`
 const PortfolioFolder = styled.div`
   display: flex;
   border-radius: 5px;
-  border: 1px solid black;
   margin-bottom: 10px;
   width: 700px;
   height: 350px;
@@ -43,10 +39,12 @@ const PortfolioFolder = styled.div`
   &:focus {
     transform: translateX(10px);
   }
-  ${media.desktop`width: 600px;`};
+  ${media.desktop`width: 550px;`};
   ${media.desktop`height: 340px;`};
-  ${media.tablet`width: 100%;`};
+  ${media.thone`width: 100%;`};
   ${media.thone`display: block;`};
+  ${media.phablet`width: 350px;`};
+  ${media.phone`width: 300px;`};
 `;
 
 const PortfolioLink = styled(Link)`
@@ -62,11 +60,14 @@ const QuoteContainer = styled.div`
   border-radius: 5px;
   position: absolute;
   background-color: white;
-  width: 310px;
-  height: 310px;
+  width: 335px;
+  height: 320px;
   transition:visibility 0.3s linear,opacity 0.3s linear;
-  ${media.desktop`width: 260px;`};
-  ${media.tablet`width: 220px;`};
+  ${media.desktop`width: 230px;`};
+  ${media.thone`width: 400px;`};
+  ${media.thone`height: 120px;`};
+  ${media.phablet`width: 320px;`};
+  ${media.phone`width: 270px;`};
 `;
 
 const Quote = styled.div`
@@ -83,9 +84,12 @@ const QuoteAuthor = styled.div`
 `;
 
 const LeftPane = styled.div`
-  width: 50%;
+  width: 300px;
   padding: 20px;
-  ${media.thone`width: 100%;`};
+  ${media.thone`width: 400px;`};
+  ${media.thone`padding: 15px;`};
+  ${media.phablet`width: 320px;`};
+  ${media.phone`width: 270px;`};
 `;
 
 const RightPane = styled.div`
@@ -95,7 +99,10 @@ const RightPane = styled.div`
     visibility: visible;
     opacity: 1;
   }
-  ${media.thone`width: 100%;`};
+  ${media.thone`width: 400px;`};
+  ${media.thone`padding: 15px;`};
+  ${media.phablet`width: 320px;`};
+  ${media.phone`width: 270px;`};
 `;
 
 const Topic = styled.p`
@@ -114,7 +121,7 @@ const Image = styled(Img)`
   border-radius: 5px;
   height: 100%;
   width: 100%;
-  ${media.thone`height: 110px;`};
+  ${media.thone`height: 120px;`};
 `;
 
 const Linearicon = styled.span`

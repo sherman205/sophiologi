@@ -22,8 +22,7 @@ const SophiologiText = styled.div`
   writing-mode: vertical-rl;
   text-orientation: upright;
   font-family: Source Code Pro;
-  font-size: 40px;
-  letter-spacing: 1px;
+  font-size: 35px;
   color: ${theme.colors.lightGrey};
 `;
 

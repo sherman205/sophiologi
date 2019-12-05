@@ -43,6 +43,7 @@ const QuoteContainer = styled.div`
   ${media.thone`width: 250px;`};
   ${media.phone`height: 200px;`};
   ${media.phone`width: 200px;`};
+  ${media.phablet`width: 170px;`};
 `;
 
 const Quote = styled.div`
@@ -50,12 +51,14 @@ const Quote = styled.div`
   font-size: 12px;
   padding: 10px;
   text-align: center;
+  ${media.phone`font-size: 10px;`};
 `;
 
 const QuoteAuthor = styled.div`
   font-size: 12px;
   text-align: right;
   padding: 10px;
+  ${media.phone`font-size: 10px;`};
 `;
 
 const ImageWrapper = styled.div`
@@ -71,6 +74,7 @@ const ImageWrapper = styled.div`
   ${media.thone`width: 250px;`};
   ${media.phone`height: 200px;`};
   ${media.phone`width: 200px;`};
+  ${media.phablet`width: 170px;`};
 `;
 
 const Image = styled(Img)`
@@ -88,6 +92,7 @@ const QuickInfo = styled.div`
   ${media.desktop`padding: 30px 100px;`};
   ${media.thone`padding: 30px 60px;`};
   ${media.phablet`padding: 20px;`};
+  ${media.tiny`padding: 0;`};
 `;
 
 const QuickInfoItem = styled.div`
@@ -105,6 +110,7 @@ const QuickText = styled.p`
   font-family: Source Code Pro
   color: ${theme.colors.pinkBrown};
   ${media.phablet`font-size: 12px;`};
+  ${media.tiny`font-size: 10px;`};
 `;
 
 const Linearicon = styled.span`
@@ -178,8 +184,7 @@ const About = ({ data }) => {
             {languages.map((lang, i) => {
               return (
                 <>
-                  {i > 0 && ', '}
-                  &nbsp;<QuickText key={i}>{lang}</QuickText>
+                  &nbsp;&nbsp;<QuickText key={i}>{lang}</QuickText>
                 </>
               );
             })}

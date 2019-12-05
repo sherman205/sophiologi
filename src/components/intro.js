@@ -37,6 +37,7 @@ const IntroTextTitle = styled.h3`
   font-size: 30px;
   padding-right: 10px;
   ${media.tablet`font-size: 25px;`};
+  ${media.tiny`font-size: 20px;`};
 `;
 
 const IntroTextName = styled.h1`

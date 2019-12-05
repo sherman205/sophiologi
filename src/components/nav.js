@@ -10,12 +10,14 @@ import Menu from "./menu"
 const NavbarContainer = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 20px 20px;
 `;
 
 const Navbar = styled.div`
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   width: 100%;
 `;
 
