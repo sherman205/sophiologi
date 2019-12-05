@@ -5,4 +5,4 @@ quote: A language is not just words. It’s a culture, a tradition, a unificatio
 quoteAuthor: Noam Chomsky
 image: './language.jpg'
 ---
-A collection of linguistic papers, my linguistic experience, etc.
+View a timeline of my work in the field of linguistics as well as some linguistics-related papers I have written.

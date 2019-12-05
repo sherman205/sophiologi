@@ -10,4 +10,4 @@ tech:
   - Cucumber
   - Docker
 ---
-A simple dockerized sort function for a CSV file of comma-separated values as an interview challenge. Possible BDD testing scenarios are illustrated using Cucumber.
+A simple docker container that sorts a CSV file of comma-separated values. Built with testing best practices in mind and possible BDD testing scenarios are illustrated using Cucumber.

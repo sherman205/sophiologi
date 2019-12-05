@@ -34,6 +34,11 @@ const Project = styled.div`
   margin: 10px;
   padding: 10px;
   box-shadow: 0 10px 30px -15px ${theme.colors.lightClay};
+  transition: all 0.25s ease;
+  &:hover,
+  &:focus {
+    transform: translateX(10px);
+  }
   ${media.desktop`width: 75%;`};
   ${media.tablet`display: block;`};
   ${media.tablet`width: 100%;`};

@@ -94,6 +94,10 @@ const IntroQuoteContainer = styled.div`
   max-width: 300px;
   background: ${theme.colors.lightClay};
   margin-left: 50px;
+  transition: opacity 0.3s linear;
+  &:hover {
+    opacity: 0.6;
+  }
   ${media.tablet`max-width: 200px;`};
   ${media.tablet`margin-left: auto;`};
   ${media.tablet`margin-right: auto;`};
