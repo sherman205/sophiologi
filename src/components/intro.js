@@ -83,6 +83,7 @@ const AboutButton = styled(Link)`
   }
   ${media.tablet`padding: 15px;`};
   ${media.phablet`font-size: 12px;`};
+  ${media.thone`margin: 0 30px 0 0;`};
 `;
 
 const IntroQuoteContainer = styled.div`

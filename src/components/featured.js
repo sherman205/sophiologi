@@ -36,7 +36,9 @@ const Project = styled.div`
   box-shadow: 0 10px 30px -15px ${theme.colors.lightClay};
   ${media.desktop`width: 75%;`};
   ${media.tablet`display: block;`};
+  ${media.tablet`width: 100%;`};
   ${media.tablet`align-items: center;`};
+  ${media.phone`height: 450px;`};
 `;
 
 const ProjectInfo = styled.div`
@@ -49,13 +51,15 @@ const ProjectInfo = styled.div`
 
 const Title = styled.h3`
   font-size: 30px;
-  ${media.tablet`font-size: 15px;`};
+  ${media.tablet`font-size: 20px;`};
+  ${media.thone`font-size: 15px;`};
 `;
 
 const Description = styled.div`
   font-family: Source Code Pro;
   ${media.desktop`font-size: 12px;`};
   ${media.tablet`font-size: 10px;`};
+  ${media.phone`font-size: 8px;`};
 `;
 
 const Tech = styled.ul`

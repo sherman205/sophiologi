@@ -6,8 +6,6 @@ import { media } from "../styles/media"
 import { theme } from "../styles/theme"
 
 const PortfolioContainer = styled.div`
-  display: flex;
-  flex-direction: column;
   margin: 0 auto;
   padding: 10px 0 200px;
   max-width: 1000px;
@@ -19,9 +17,9 @@ const PortfolioContainer = styled.div`
 
 const PortfolioHeader = styled.h3`
   margin: 0;
+  text-align: center;
   font-size: 30px;
   font-family: Source Code Pro;
-  text-align: center;
   ${media.tablet`font-size: 20px;`};
 `;
 
@@ -35,6 +33,7 @@ const PortfolioItems = styled.div`
 const PortfolioFolder = styled.div`
   display: flex;
   border-radius: 5px;
+  border: 1px solid black;
   margin-bottom: 10px;
   width: 700px;
   height: 350px;
@@ -45,7 +44,9 @@ const PortfolioFolder = styled.div`
     transform: translateX(10px);
   }
   ${media.desktop`width: 600px;`};
-  ${media.tablet`width: 500px;`};
+  ${media.desktop`height: 340px;`};
+  ${media.tablet`width: 100%;`};
+  ${media.thone`display: block;`};
 `;
 
 const PortfolioLink = styled(Link)`
@@ -64,6 +65,8 @@ const QuoteContainer = styled.div`
   width: 310px;
   height: 310px;
   transition:visibility 0.3s linear,opacity 0.3s linear;
+  ${media.desktop`width: 260px;`};
+  ${media.tablet`width: 220px;`};
 `;
 
 const Quote = styled.div`
@@ -82,6 +85,7 @@ const QuoteAuthor = styled.div`
 const LeftPane = styled.div`
   width: 50%;
   padding: 20px;
+  ${media.thone`width: 100%;`};
 `;
 
 const RightPane = styled.div`
@@ -91,6 +95,7 @@ const RightPane = styled.div`
     visibility: visible;
     opacity: 1;
   }
+  ${media.thone`width: 100%;`};
 `;
 
 const Topic = styled.p`
@@ -107,8 +112,9 @@ const Image = styled(Img)`
   opacity: 0.6;
   z-index: -2;
   border-radius: 5px;
-  height: 310px;
-  width: 310px;
+  height: 100%;
+  width: 100%;
+  ${media.thone`height: 110px;`};
 `;
 
 const Linearicon = styled.span`
