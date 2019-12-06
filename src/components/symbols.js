@@ -70,21 +70,16 @@ const Symbols = () => {
           <SymbolItem>
             <CodeLinearicon className="linearicons-file-code"></CodeLinearicon>
             <SymbolItemHeading>Software</SymbolItemHeading>
-            <SymbolItemText>Backend, frontend, design, small projects on the side, you name it</SymbolItemText>
+            <SymbolItemText>Backend, frontend, design, small projects on the side</SymbolItemText>
           </SymbolItem>
         </SymbolItemLink>
         <SymbolItemLink to="/portfolio/language">
           <SymbolItem>
             <EarthLinearicon className="linearicons-earth"></EarthLinearicon>
             <SymbolItemHeading>Language</SymbolItemHeading>
-            <SymbolItemText>Linguistics of all kinds, some foreign language included woooo</SymbolItemText>
+            <SymbolItemText>Language research papers and other linguistics projects</SymbolItemText>
           </SymbolItem>
         </SymbolItemLink>
-        <SymbolItem>
-          <CodeLinearicon className="linearicons-file-code"></CodeLinearicon>
-          <SymbolItemHeading>Software</SymbolItemHeading>
-          <SymbolItemText>idk what's going in here yet, i'm open to ideas</SymbolItemText>
-        </SymbolItem>
       </SymbolsIconContainer>
     </SymbolsContainer>
   );
