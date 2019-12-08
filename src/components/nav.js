@@ -19,6 +19,7 @@ const Navbar = styled.div`
   justify-content: flex-end;
   align-items: center;
   width: 100%;
+  ${media.tablet`display: none;`};
 `;
 
 const NavLogo = styled.div`
@@ -138,10 +139,8 @@ class Nav extends Component {
   };
 
   componentDidMount() {
-    setTimeout(() => {
-      window.addEventListener('resize', () => this.handleResize());
-      window.addEventListener('keydown', e => this.handleKeydown(e));
-    }, 100);
+    window.addEventListener('resize', () => this.handleResize());
+    window.addEventListener('keydown', e => this.handleKeydown(e));
   }
 
   componentWillUnmount() {
@@ -184,31 +183,26 @@ class Nav extends Component {
           <NavLogo>
             <Logo />
           </NavLogo>
-          {isMobile && (
-            <Hamburger onClick={this.toggleMenu}>
-              <HamburgerBox>
-                <HamburgerInner menuOpen={menuOpen}/>
-              </HamburgerBox>
-            </Hamburger>
-          )}
-          {!isMobile && (
-            <Navbar>
-              <NavLinks>
-                <NavList>
-                  <NavListItem>
-                    <NavLink exact="true" to="/" activeClassName="active">Home</NavLink>
-                  </NavListItem>
-                  <NavListItem>
-                    <NavLink exact="true" to="/about" activeClassName="active">About</NavLink>
-                  </NavListItem>
-                  <NavListItem>
-                    <NavLink exact="true" to="/portfolio" activeClassName="active">Portfolio</NavLink>
-                  </NavListItem>
-                </NavList>
-              </NavLinks>
-            </Navbar>
-          )}
-
+          <Navbar>
+            <NavLinks>
+              <NavList>
+                <NavListItem>
+                  <NavLink exact="true" to="/" activeClassName="active">Home</NavLink>
+                </NavListItem>
+                <NavListItem>
+                  <NavLink exact="true" to="/about" activeClassName="active">About</NavLink>
+                </NavListItem>
+                <NavListItem>
+                  <NavLink exact="true" to="/portfolio" activeClassName="active">Portfolio</NavLink>
+                </NavListItem>
+              </NavList>
+            </NavLinks>
+          </Navbar>
+          <Hamburger onClick={this.toggleMenu}>
+            <HamburgerBox>
+              <HamburgerInner menuOpen={menuOpen}/>
+            </HamburgerBox>
+          </Hamburger>
           <Menu menuOpen={menuOpen} toggleMenu={this.toggleMenu} />
         </NavbarContainer>
       </>
