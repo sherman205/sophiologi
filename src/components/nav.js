@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
-import Helmet from 'react-helmet';
+import Helmet from 'react-helmet'
 import styled from "styled-components"
 import { media } from "../styles/media"
 import { theme } from "../styles/theme"
@@ -195,15 +195,15 @@ class Nav extends Component {
             <Navbar>
               <NavLinks>
                 <NavList>
-                    <NavListItem>
-                      <NavLink exact to="/" activeClassName="active">Home</NavLink>
-                    </NavListItem>
-                    <NavListItem>
-                      <NavLink exact to="/about" activeClassName="active">About</NavLink>
-                    </NavListItem>
-                    <NavListItem>
-                      <NavLink exact to="/portfolio" activeClassName="active">Portfolio</NavLink>
-                    </NavListItem>
+                  <NavListItem>
+                    <NavLink exact="true" to="/" activeClassName="active">Home</NavLink>
+                  </NavListItem>
+                  <NavListItem>
+                    <NavLink exact="true" to="/about" activeClassName="active">About</NavLink>
+                  </NavListItem>
+                  <NavListItem>
+                    <NavLink exact="true" to="/portfolio" activeClassName="active">Portfolio</NavLink>
+                  </NavListItem>
                 </NavList>
               </NavLinks>
             </Navbar>
