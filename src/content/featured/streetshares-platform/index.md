@@ -1,7 +1,7 @@
 ---
 date: '4'
 title: 'StreetShares Platform'
-preview: ''
+preview: '../../../images/logo.png'
 github: ''
 live: 'https://streetsharesplatform.com/how-it-works/'
 featured: ''

@@ -1,7 +1,7 @@
 ---
 date: '3'
 title: 'Docker Sort'
-preview: ''
+preview: '../../../images/logo.png'
 github: 'https://github.com/sherman205/cambia-sort'
 live: ''
 featured: ''
