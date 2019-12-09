@@ -172,8 +172,7 @@ class Nav extends Component {
   };
 
   render() {
-    const { width, menuOpen } = this.state;
-    const isMobile = width <= 768;
+    const { menuOpen } = this.state;
     return (
       <>
         <NavbarContainer>
