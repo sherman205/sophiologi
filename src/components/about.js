@@ -107,7 +107,7 @@ const QuickInfoItem = styled.div`
 
 const QuickText = styled.p`
   font-size: 15px;
-  font-family: Source Code Pro
+  font-family: Source Code Pro;
   color: ${theme.colors.pinkBrown};
   ${media.phablet`font-size: 12px;`};
   ${media.tiny`font-size: 10px;`};

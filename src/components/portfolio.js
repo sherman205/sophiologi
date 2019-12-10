@@ -75,12 +75,14 @@ const Quote = styled.div`
   font-size: 12px;
   padding: 10px;
   text-align: center;
+  ${media.phablet`font-size: 10px;`};
 `;
 
 const QuoteAuthor = styled.div`
   font-size: 12px;
   text-align: right;
   padding: 10px;
+  ${media.phablet`font-size: 10px;`};
 `;
 
 const LeftPane = styled.div`
@@ -122,6 +124,7 @@ const Image = styled(Img)`
   height: 100%;
   width: 100%;
   ${media.thone`height: 120px;`};
+  ${media.phablet`height: 105px;`};
 `;
 
 const Linearicon = styled.span`
