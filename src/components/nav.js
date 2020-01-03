@@ -22,7 +22,7 @@ const Navbar = styled.div`
   ${media.tablet`display: none;`};
 `;
 
-const NavLogo = styled.div`
+const NavLogo = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -179,7 +179,7 @@ class Nav extends Component {
           <Helmet>
             <body className={menuOpen ? 'noScroll' : ''} />
           </Helmet>
-          <NavLogo>
+          <NavLogo to="/">
             <Logo />
           </NavLogo>
           <Navbar>
