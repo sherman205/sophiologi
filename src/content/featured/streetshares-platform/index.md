@@ -1,10 +1,10 @@
 ---
 date: '4'
 title: 'StreetShares Platform'
-preview: '../../../images/logo.png'
+preview: './streetshares-platform.png'
 github: ''
 live: 'https://streetsharesplatform.com/how-it-works/'
-featured: ''
+featured: 'true'
 tech:
   - Python
   - AngularJS

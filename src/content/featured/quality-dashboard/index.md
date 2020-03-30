@@ -4,7 +4,7 @@ title: 'Quality Dashboard'
 preview: './dashboard.png'
 github: 'https://github.com/sherman205/quality-dashboard'
 live: ''
-featured: 'true'
+featured: 'false'
 tech:
   - Python
   - Flask

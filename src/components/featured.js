@@ -24,15 +24,16 @@ const FeaturedProjectsContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 50px;
 `;
 
 const Project = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
-  width: 800px;
-  height: 500px;
-  margin: 10px;
-  padding: 10px;
+  width: 100%;
+  height: 100%;
+  margin: 20px;
   box-shadow: 0 10px 30px -15px ${theme.colors.lightClay};
   transition: all 0.25s ease;
   &:hover,
@@ -40,23 +41,17 @@ const Project = styled.div`
     transform: translateX(10px);
   }
   ${media.desktop`width: 75%;`};
-  ${media.tablet`display: block;`};
   ${media.tablet`width: 100%;`};
   ${media.tablet`align-items: center;`};
-  ${media.phone`height: 450px;`};
-  ${media.tiny`height: 420px;`};
 `;
 
 const ProjectInfo = styled.div`
   padding: 20px 40px;
-  width: 700px;
   align-self: flex-start;
-  ${media.tablet`width: 200px;`};
-  ${media.tablet`padding-bottom: 0;`};
   ${media.tiny`padding: 10px 20px;`};
 `;
 
-const Title = styled.h3`
+const Title = styled.h2`
   font-size: 30px;
   ${media.tablet`font-size: 20px;`};
   ${media.thone`font-size: 15px;`};
@@ -70,12 +65,11 @@ const Description = styled.div`
 `;
 
 const Tech = styled.ul`
-  display: grid;
-  grid-template-columns: repeat(2, minmax(100px, 120px));
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
   padding: 5px;
   ${media.tablet`padding: 0;`};
-  ${media.tablet`grid-template-columns: repeat(2, minmax(20px, 80px));`};
 `;
 
 const TechItem = styled.li`
@@ -85,6 +79,9 @@ const TechItem = styled.li`
   text-align: center;
   border-radius: 5px;
   background: ${theme.colors.lightClay};
+  &:hover {
+    opacity: 0.6;
+  }
   ${media.desktop`font-size: 12px;`};
   ${media.desktop`width: 50px;`};
   ${media.tablet`font-size: 10px;`};
@@ -92,38 +89,29 @@ const TechItem = styled.li`
   ${media.tablet`margin: 2px;`};
 `;
 
-const RightPane = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 1000px;
-  height: 100%;
-  ${media.tablet`width: 100%;`};
-`;
-
-const ProjectPreview = styled.div`
+const ProjectImg = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
-  ${media.tablet`height: 180px;`};
+  width: 100%;
   ${media.tablet`justify-content: flex-start;`};
 `;
 
 const Screenshot = styled(Img)`
-  opacity: 0.6;
+  &:hover {
+    opacity: 0.6;
+  }
 `;
 
 const ProjectLinks = styled.div`
   display: flex;
   justify-content: flex-end;
-  padding: 5px;
-  ${media.tablet`justify-content: flex-start;`};
   ${media.tablet`padding-left: 30px;`};
   ${media.tiny`padding: 0;`};
 `;
 
 const ProjectLinkItem = styled.a`
-  padding: 10px;
+  padding-left: 20px;
   border-radius: 5px;
   color: black;
   svg {
@@ -136,11 +124,17 @@ const ProjectLinkItem = styled.a`
       fill: ${theme.colors.pinkBrown};
     }
   }
-  ${media.tiny`padding: 5px;`};
-  ${media.tiny`
+  ${media.phone`
     svg {
       width: 15px;
       height: 15px;
+    }`
+  };
+  ${media.tiny`padding: 5px;`};
+  ${media.tiny`
+    svg {
+      width: 10px;
+      height: 10px;
     }`
   };
 `;
@@ -156,6 +150,9 @@ const Featured = ( {data} ) => {
           const { title, tech, preview, github, live } = frontmatter;
           return (
             <Project key={i}>
+              <ProjectImg>
+                <Screenshot fluid={preview.childImageSharp.fluid} />
+              </ProjectImg>
               <ProjectInfo>
                 <Title>{title}</Title>
                 <Description dangerouslySetInnerHTML={{ __html: html }} />
@@ -166,8 +163,6 @@ const Featured = ( {data} ) => {
                     ))}
                   </Tech>
                 )}
-              </ProjectInfo>
-              <RightPane>
                 <ProjectLinks>
                   {github && (
                     <ProjectLinkItem
@@ -188,10 +183,7 @@ const Featured = ( {data} ) => {
                     </ProjectLinkItem>
                   )}
                 </ProjectLinks>
-                <ProjectPreview>
-                  <Screenshot fluid={preview.childImageSharp.fluid} />
-                </ProjectPreview>
-              </RightPane>
+              </ProjectInfo>
             </Project>
           );
         })}

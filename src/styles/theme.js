@@ -5,7 +5,8 @@ export const theme = {
     lightClay: 'rgb(151, 75, 41 , 0.3)',
     clay: '#974B29',
     white: '#ECECED',
-    brown: '#4C3934'
+    brown: '#4C3934',
+    black: '#000000'
   },
 };
 

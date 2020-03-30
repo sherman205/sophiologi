@@ -23,7 +23,12 @@ const SophiologiText = styled.div`
   text-orientation: upright;
   font-family: Source Code Pro;
   font-size: 35px;
+  cursor: default;
+  transition: all 0.25s ease;
   color: ${theme.colors.lightGrey};
+  &:hover {
+    color: ${theme.colors.pinkBrown};
+  }
 `;
 
 const Sophiologi = () => {

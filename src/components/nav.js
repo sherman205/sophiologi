@@ -27,6 +27,10 @@ const NavLogo = styled(Link)`
   justify-content: center;
   align-items: center;
   margin-left: 25px;
+  transition: all 0.25s ease;
+  &:hover {
+    opacity: 0.6;
+  }
   ${media.tablet`margin: 0;`};
 `;
 

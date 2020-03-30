@@ -79,8 +79,8 @@ const AboutButton = styled(Link)`
   &:hover,
   &:focus,
   &:active {
-    border: 1px solid ${theme.colors.lightGrey};
-    color: ${theme.colors.lightGrey};
+    border: 1px solid ${theme.colors.black};
+    color: ${theme.colors.black};
   }
   ${media.tablet`padding: 15px;`};
   ${media.phablet`font-size: 12px;`};
