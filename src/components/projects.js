@@ -19,14 +19,6 @@ const ProjectsGrid = styled.div`
   ${media.tablet`grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));`};
 `;
 
-const ProjectsHeader = styled.h3`
-  font-size: 20px;
-  font-family: Source Code Pro;
-  text-align: center;
-  padding: 20px;
-  ${media.tablet`font-size: 15px;`};
-`;
-
 const ProjectCard = styled.div`
   display: flex;
   flex-direction: column;
@@ -89,7 +81,6 @@ const TechItem = styled.li`
 const Projects = ( {data} ) => {
   return (
     <ProjectsContainer>
-      <ProjectsHeader>Projects I've worked on</ProjectsHeader>
       <ProjectsGrid>
         {data.map(({ node }, i) => {
           const { frontmatter, html } = node;

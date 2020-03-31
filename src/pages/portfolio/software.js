@@ -5,6 +5,7 @@ import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import Experience from "../../components/experience"
 import Projects from "../../components/projects"
+import Skills from "../../components/skills"
 import { theme } from "../../styles/theme";
 
 const SoftwareContainer = styled.div`
@@ -36,10 +37,10 @@ const SoftwareMenuItem = styled.li`
   border-radius: 5px;
   width: 80px;
   text-align: center;
+  cursor: default;
   background: ${theme.colors.lightClay};
-  &:hover,
-  &:focus,
-  &.active {
+  opacity: ${props => (props.selected ? '0.6' : '')};
+  &:hover {
     opacity: 0.6;
   }
 `;
@@ -48,22 +49,21 @@ class SoftwarePage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      active: 'experience'
+      viewType: 'experience'
     };
   };
 
   selectMenuItem = (item) => {
     this.setState({
-      active: item.toLowerCase()
+      viewType: item.toLowerCase()
     });
   }
 
 
   render() {
     const { data } = this.props;
-    const { active } = this.state;
+    const { viewType } = this.state;
     const menuItems = ["Experience", "Skills", "Projects"];
-    console.log(active);
     return (
       <Layout>
         <SEO title="Software Portfolio" />
@@ -71,14 +71,17 @@ class SoftwarePage extends Component {
           <SoftwareHeader>Software</SoftwareHeader>
           <SoftwareMenuList>
             {menuItems.map((item, i) => (
-              <SoftwareMenuItem key={i} onClick={() => this.selectMenuItem(item)}>{item}</SoftwareMenuItem>
+              <SoftwareMenuItem key={i} active={viewType} selected={viewType === item.toLowerCase() ? true : ''} onClick={() => this.selectMenuItem(item)}>{item}</SoftwareMenuItem>
             ))}
           </SoftwareMenuList>
-          {active == 'experience' && (
+          {viewType == 'experience' && (
             <Experience data={data.experience.edges} type="software"/>
           )}
-          {active == 'projects' && (
+          {viewType == 'projects' && (
             <Projects data={data.featured.edges}/>
+          )}
+          {viewType == 'skills' && (
+            <Skills data={data.featured.edges}/>
           )}
         </SoftwareContainer>
       </Layout>
