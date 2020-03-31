@@ -27,7 +27,7 @@ const SymbolsIconContainer = styled.div`
 const SymbolItem = styled.div`
   text-align: center;
   max-width: 100px;
-  ${media.tablet`margin: 0 auto;`};
+  ${media.tablet`margin: 40px auto;`};
 `;
 
 const SymbolItemLink = styled(Link)`

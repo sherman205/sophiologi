@@ -43,6 +43,8 @@ const Project = styled.div`
   ${media.desktop`width: 75%;`};
   ${media.tablet`width: 100%;`};
   ${media.tablet`align-items: center;`};
+  ${media.thone`width: 120%;`};
+  ${media.phone`width: 150%;`};
 `;
 
 const ProjectInfo = styled.div`
@@ -125,7 +127,8 @@ const ProjectLinkItem = styled.a`
       fill: ${theme.colors.pinkBrown};
     }
   }
-  ${media.phone`
+  ${media.thone`padding-left: 10px;`};
+  ${media.thone`
     svg {
       width: 15px;
       height: 15px;
