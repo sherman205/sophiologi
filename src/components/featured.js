@@ -48,6 +48,7 @@ const Project = styled.div`
 const ProjectInfo = styled.div`
   padding: 20px 40px;
   align-self: flex-start;
+  box-shadow: 0 10px 30px -15px ${theme.colors.lightClay};
   ${media.tiny`padding: 10px 20px;`};
 `;
 

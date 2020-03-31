@@ -25,6 +25,7 @@ const IntroTopSection = styled.div`
 const IntroTextContainer = styled.div`
   max-width: 500px;
   letter-spacing: 5px;
+  cursor: default;
 `;
 
 const IntroText = styled.div`
@@ -43,6 +44,12 @@ const IntroTextTitle = styled.h3`
 const IntroTextName = styled.h1`
   font-size: 80px;
   color: ${theme.colors.clay};
+  transition: all 0.5s ease;
+  &:hover {
+    transition: all 0.25s ease;
+    color: ${theme.colors.pinkBrown};
+    letter-spacing: 2px;
+  }
   ${media.tablet`font-size: 50px;`};
 `;
 
@@ -64,6 +71,13 @@ const IntroNounsList = styled.ul`
 const IntroNounItem = styled.li`
   text-transform: uppercase;
   font-size: 20px;
+  cursor: default;
+  transition: all 0.5s ease;
+  &:hover {
+    transition: all 0.25s ease;
+    color: ${theme.colors.clay};
+    letter-spacing: 2px;
+  }
 `;
 
 const AboutButton = styled(Link)`

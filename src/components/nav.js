@@ -137,8 +137,8 @@ class Nav extends Component {
     super(props);
     const width = typeof window !== `undefined` ? window.innerWidth : null;
     this.state = {
-        width: width,
-        menuOpen: false
+      width: width,
+      menuOpen: false
     };
   };
 

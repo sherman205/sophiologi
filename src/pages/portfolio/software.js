@@ -1,10 +1,11 @@
-import React from "react"
+import React, { Component } from "react"
 import { graphql } from 'gatsby'
 import styled from "styled-components"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import Experience from "../../components/experience"
 import Projects from "../../components/projects"
+import { theme } from "../../styles/theme";
 
 const SoftwareContainer = styled.div`
   display: flex;
@@ -22,17 +23,68 @@ const SoftwareHeader = styled.h3`
   text-align: center;
 `;
 
+const SoftwareMenuList = styled.ul`
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  list-style: none;
+`;
 
-const SoftwarePage = ( {data} ) => (
-  <Layout>
-    <SEO title="Software Portfolio" />
-    <SoftwareContainer>
-      <SoftwareHeader>Software</SoftwareHeader>
-      <Experience data={data.experience.edges} type="software"/>
-      <Projects data={data.featured.edges}/>
-    </SoftwareContainer>
-  </Layout>
-)
+const SoftwareMenuItem = styled.li`
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  width: 80px;
+  text-align: center;
+  background: ${theme.colors.lightClay};
+  &:hover,
+  &:focus,
+  &.active {
+    opacity: 0.6;
+  }
+`;
+
+class SoftwarePage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      active: 'experience'
+    };
+  };
+
+  selectMenuItem = (item) => {
+    this.setState({
+      active: item.toLowerCase()
+    });
+  }
+
+
+  render() {
+    const { data } = this.props;
+    const { active } = this.state;
+    const menuItems = ["Experience", "Skills", "Projects"];
+    console.log(active);
+    return (
+      <Layout>
+        <SEO title="Software Portfolio" />
+        <SoftwareContainer>
+          <SoftwareHeader>Software</SoftwareHeader>
+          <SoftwareMenuList>
+            {menuItems.map((item, i) => (
+              <SoftwareMenuItem key={i} onClick={() => this.selectMenuItem(item)}>{item}</SoftwareMenuItem>
+            ))}
+          </SoftwareMenuList>
+          {active == 'experience' && (
+            <Experience data={data.experience.edges} type="software"/>
+          )}
+          {active == 'projects' && (
+            <Projects data={data.featured.edges}/>
+          )}
+        </SoftwareContainer>
+      </Layout>
+    );
+  }
+};
 
 export default SoftwarePage;
 
