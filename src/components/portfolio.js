@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
@@ -150,7 +150,7 @@ const Portfolio = ( {data} ) => {
           const { frontmatter, html } = node;
           const { title, image, quote, quoteAuthor } = frontmatter;
           return (
-            <PortfolioLink to={`/portfolio/${title.toLowerCase()}`}>
+            <PortfolioLink to={`/portfolio/${title.toLowerCase()}`} key={i}>
               <PortfolioFolder>
                 <LeftPane>
                   <PaperClipLinearicon className="linearicons-paperclip"></PaperClipLinearicon>

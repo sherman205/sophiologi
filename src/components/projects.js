@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import GithubIcon from './icons/github'
 import ExternalIcon from './icons/external'
 import styled from "styled-components"

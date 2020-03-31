@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import { media } from "../styles/media"
@@ -13,13 +13,6 @@ const IntroContainer = styled.div`
   padding: 10px 0 250px;
   max-width: 1000px;
   ${media.tablet`padding: 20px 0 50px;`};
-`;
-
-const IntroTopSection = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  ${media.tablet`display: block;`};
 `;
 
 const IntroTextContainer = styled.div`

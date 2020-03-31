@@ -1,7 +1,6 @@
-import React, { Component } from "react"
+import React from "react"
 import { Timeline, TimelineItem }  from 'vertical-timeline-component-for-react'
 import styled from "styled-components"
-import { media } from "../styles/media";
 import { theme } from "../styles/theme";
 
 const ExperienceContainer = styled.div`

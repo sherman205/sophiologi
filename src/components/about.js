@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { media } from "../styles/media";
@@ -181,13 +181,11 @@ const About = ({ data }) => {
           </QuickInfoItem>
           <QuickInfoItem>
             <TextLinearicon className="linearicons-text-size"></TextLinearicon>
-            {languages.map((lang, i) => {
-              return (
-                <>
-                  &nbsp;&nbsp;<QuickText key={i}>{lang}</QuickText>
-                </>
-              );
-            })}
+            {languages.map((lang, i) => (
+              <div key={i}>
+                &nbsp;&nbsp;<QuickText>{lang}</QuickText>
+              </div>
+            ))}
           </QuickInfoItem>
         </QuickInfo>
       </AboutCard>

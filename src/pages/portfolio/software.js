@@ -74,13 +74,13 @@ class SoftwarePage extends Component {
               <SoftwareMenuItem key={i} active={viewType} selected={viewType === item.toLowerCase() ? true : ''} onClick={() => this.selectMenuItem(item)}>{item}</SoftwareMenuItem>
             ))}
           </SoftwareMenuList>
-          {viewType == 'experience' && (
+          {viewType === 'experience' && (
             <Experience data={data.experience.edges} type="software"/>
           )}
-          {viewType == 'projects' && (
+          {viewType === 'projects' && (
             <Projects data={data.featured.edges}/>
           )}
-          {viewType == 'skills' && (
+          {viewType === 'skills' && (
             <Skills data={data.featured.edges}/>
           )}
         </SoftwareContainer>

@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import Img from "gatsby-image"
 import styled from "styled-components"
 import GithubIcon from './icons/github'
