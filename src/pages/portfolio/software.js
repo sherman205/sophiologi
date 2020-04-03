@@ -81,7 +81,7 @@ class SoftwarePage extends Component {
             <Projects data={data.featured.edges}/>
           )}
           {viewType === 'skills' && (
-            <Skills data={data.featured.edges}/>
+            <Skills data={data.skills.edges}/>
           )}
         </SoftwareContainer>
       </Layout>
@@ -122,6 +122,19 @@ export const query = graphql`
             tech
             github
             live
+          }
+        }
+      }
+    }
+    skills: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/skills/" } }
+      sort: { fields: [frontmatter___order], order: ASC }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            tech
           }
         }
       }
