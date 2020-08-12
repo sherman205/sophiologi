@@ -182,9 +182,7 @@ const About = ({ data }) => {
           <QuickInfoItem>
             <TextLinearicon className="linearicons-text-size"></TextLinearicon>
             {languages.map((lang, i) => (
-              <div key={i}>
-                &nbsp;&nbsp;<QuickText>{lang}</QuickText>
-              </div>
+                <QuickText key={i}>{ (i ? ', ' : '') + lang }</QuickText>
             ))}
           </QuickInfoItem>
         </QuickInfo>
