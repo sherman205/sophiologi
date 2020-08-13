@@ -9,5 +9,6 @@ tech:
   - React
   - Puppeteer
   - Cucumber.js
+  - Docker
 ---
 A sample react app that demonstrates how to enable automated User Acceptance Cucumber tests for a browser-based front end using Puppeteer.

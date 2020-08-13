@@ -10,4 +10,6 @@ tech:
   - CircleCI
   - Artifactory
   - Netlify
+  - Jira
+  - Papertrail
 ---

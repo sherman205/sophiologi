@@ -20,4 +20,4 @@ Unfortunately, I don't get to work on pure linguistics projects anymore, but I h
 
 When I'm not working my brain, I'm usually outdoors, making my house beautiful, and traveling. I just love keeping busy and seeing new things.
 
-I'm not currently looking for any job opportunities, but feel free to reach out if you want to talk about a potential project or even just to say hi! My inbox is always open — <strong>sherman205@gmail.com</strong>.
+I'm keeping my eyes peeled for an amazing job opportunity, so feel free to reach out if you want to talk about a job opening, potential project or even just to say hi! My inbox is always open — <strong>sherman205@gmail.com</strong>.

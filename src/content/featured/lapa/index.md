@@ -8,7 +8,7 @@ featured: 'true'
 tech:
   - React
   - SCSS
-  - Gatsby
+  - Gatsby.js
   - Netlify
 ---
 A collection of recipes, their stories, and some delicious pictures to go along with it. Browse recipes by category or search for your favorite.

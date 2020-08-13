@@ -3,10 +3,12 @@ order: '1'
 title: 'Computer Languages'
 tech:
   - Python
+  - Node
+  - Javascript
+  - Ruby
   - C
   - C++
-  - Ruby
-  - Javascript
+  - C#
   - Bash
   - HTML
   - (S)CSS

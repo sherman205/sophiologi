@@ -10,5 +10,6 @@ tech:
   - AngularJS
   - MySQL
   - Docker
+  - AWS
 ---
-Learn about the lending-as-a-service (Laas) product that allows banks and credit unions to make small business loans with a 100% digital experience.
+Learn about the lending-as-a-service (LaaS) product that allows banks and credit unions to make small business loans with a 100% digital experience.

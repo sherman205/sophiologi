@@ -7,5 +7,4 @@ nouns:
   - Fullstack Developer
   - Linguist
   - World Traveler
-  - Cat Lover
 ---

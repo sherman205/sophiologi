@@ -5,9 +5,11 @@ tech:
   - Node.js
   - Angular(JS)
   - React
+  - Django
   - jQuery
   - Docker
-  - Django
+  - Grafana
+  - Prometheus
   - Gatsby.js
   - Puppeteer
   - NLTK
