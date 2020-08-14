@@ -1,7 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import { media } from "../styles/media";
+import { theme } from "../styles/theme"
+import { media } from "../styles/media"
 
 const SymbolsContainer = styled.div`
   margin: 0 auto;
@@ -14,19 +15,42 @@ const SymbolsHeader = styled.h3`
   font-size: 30px;
   font-family: Source Code Pro;
   text-align: center;
-  padding: 20px;
+  padding: 50px;
   ${media.tablet`font-size: 20px;`};
 `;
 
 const SymbolsIconContainer = styled.div`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   ${media.tablet`display: block;`};
+`;
+
+const SymbolItemHeading = styled.h4`
+`;
+
+const Linearicon = styled.span`
+  &:before {
+    font-size: 50px;
+    justify-content: center;
+  }
 `;
 
 const SymbolItem = styled.div`
   text-align: center;
   max-width: 100px;
+  height: 200px;
+  padding: 2rem 3rem;
+  margin: 15px;
+  border-radius: 5px;
+  box-shadow: 0 10px 30px -15px ${theme.colors.lightClay};
+  transition: all 0.25s ease;
+  &:hover,
+  &:focus {
+    transform: translateY(5px);
+  }
+  &:hover ${Linearicon}, &:hover ${SymbolItemHeading} {
+    color: ${theme.colors.pinkBrown};
+  }
   ${media.tablet`margin: 40px auto;`};
 `;
 
@@ -35,18 +59,8 @@ const SymbolItemLink = styled(Link)`
   color: black;
 `;
 
-const SymbolItemHeading = styled.h4`
-`;
-
 const SymbolItemText = styled.p`
   font-size: 12px;
-`;
-
-const Linearicon = styled.span`
-  &:before {
-    font-size: 50px;
-    justify-content: center;
-  }
 `;
 
 const CodeLinearicon = styled(Linearicon)`
@@ -58,6 +72,12 @@ const CodeLinearicon = styled(Linearicon)`
 const EarthLinearicon = styled(Linearicon)`
   &:before {
     content: "\\eb84";
+  }
+`;
+
+const PlaneLinearicon = styled(Linearicon)`
+  &:before {
+    content: "\\eb3d";
   }
 `;
 
@@ -78,6 +98,13 @@ const Symbols = () => {
             <EarthLinearicon className="linearicons-earth"></EarthLinearicon>
             <SymbolItemHeading>Language</SymbolItemHeading>
             <SymbolItemText>Language research papers and other linguistics projects</SymbolItemText>
+          </SymbolItem>
+        </SymbolItemLink>
+        <SymbolItemLink>
+          <SymbolItem>
+            <PlaneLinearicon className="linearicons-plane"></PlaneLinearicon>
+            <SymbolItemHeading>Travel</SymbolItemHeading>
+            <SymbolItemText>Content incoming</SymbolItemText>
           </SymbolItem>
         </SymbolItemLink>
       </SymbolsIconContainer>

@@ -4,7 +4,7 @@ name: Sophia
 quote: No matter what people tell you, words and ideas can change the world.
 quoteAuthor: Robin Williams
 nouns:
-  - Fullstack Developer
+  - Software Engineer
   - Linguist
-  - World Traveler
+  - Adventurer
 ---

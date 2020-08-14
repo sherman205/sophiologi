@@ -74,10 +74,10 @@ const IntroNounItem = styled.li`
 `;
 
 const AboutButton = styled(Link)`
-  margin: 30px 30px 0;
+  margin: 30px 20px 0 0;
   color: ${theme.colors.clay};
   text-decoration: none;
-  border: 1px solid ${theme.colors.clay};
+  border: 1px solid ${theme.colors.lightClay};
   border-radius: 5px;
   padding: 20px;
   text-align: center;
@@ -86,7 +86,7 @@ const AboutButton = styled(Link)`
   &:hover,
   &:focus,
   &:active {
-    border: 1px solid ${theme.colors.black};
+    background-color: ${theme.colors.lightClay};
     color: ${theme.colors.black};
   }
   ${media.tablet`padding: 15px;`};
