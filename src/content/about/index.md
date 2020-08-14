@@ -4,8 +4,8 @@ image: './me.jpg'
 location: Portland, OR
 education: Linguistics & Computer Science, B.A., UCLA
 languages: 
-  - English
-  - Russian
+  - English,
+  - Russian,
   - French
 quote: You'll not only miss the people you love but you'll miss the person you are now at this time and this place, because you'll never be this way ever again.
 quoteAuthor: Azar Nafisi
