@@ -79,7 +79,7 @@ class Portfolio extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      portfolioType: this.props.location.state.type || 'software'
+      portfolioType: this.props.location.state.type ? this.props.location.state.type : 'software'
     };
   };
 
