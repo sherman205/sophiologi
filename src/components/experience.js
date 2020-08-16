@@ -22,7 +22,6 @@ const Position = styled.span`
 `;
 
 const MyTimeline = styled(Timeline)`
-  z-index: -1 !important;
 `;
 
 const Experience = ( {data, type} ) => {
