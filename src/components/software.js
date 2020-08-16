@@ -39,7 +39,7 @@ class Software extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      viewType: 'experience'
+      viewType: 'projects'
     };
   };
 
@@ -53,7 +53,7 @@ class Software extends Component {
   render() {
     const { data } = this.props;
     const { viewType } = this.state;
-    const menuItems = ["Experience", "Skills", "Projects"];
+    const menuItems = ["Projects", "Experience", "Skills"];
     return (
         <SoftwareContainer>
             <SoftwareMenuList>

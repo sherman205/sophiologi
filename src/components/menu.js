@@ -17,13 +17,13 @@ const StyledContainer = styled.div`
   transform: translateX(${props => (props.menuOpen ? 0 : 100)}vw);
   visibility: ${props => (props.menuOpen ? 'visible' : 'hidden')};
   display: none;
+  z-index: 10;
   ${media.tablet`display: block;`};
 `;
 const Sidebar = styled.aside`
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 10;
   flex-direction: column;
   background-color: ${theme.colors.pinkBrown};
   box-shadow: -10px 0px 30px -15px ${theme.colors.pinkBrown};

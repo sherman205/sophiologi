@@ -86,14 +86,14 @@ const Symbols = () => {
     <SymbolsContainer>
       <SymbolsHeader>Things I do</SymbolsHeader>
       <SymbolsIconContainer>
-        <SymbolItemLink to="/portfolio/software">
+        <SymbolItemLink to="/portfolio" state={{ type: 'software' }}>
           <SymbolItem>
             <CodeLinearicon className="linearicons-file-code"></CodeLinearicon>
             <SymbolItemHeading>Software</SymbolItemHeading>
             <SymbolItemText>Backend, frontend, design, small projects on the side</SymbolItemText>
           </SymbolItem>
         </SymbolItemLink>
-        <SymbolItemLink to="/portfolio/language">
+        <SymbolItemLink to="/portfolio" state={{ type: 'language' }}>
           <SymbolItem>
             <EarthLinearicon className="linearicons-earth"></EarthLinearicon>
             <SymbolItemHeading>Language</SymbolItemHeading>

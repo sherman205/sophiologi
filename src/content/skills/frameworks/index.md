@@ -11,6 +11,7 @@ tech:
   - Grafana
   - Prometheus
   - Gatsby.js
+  - Styled Components
   - Puppeteer
   - NLTK
   - Drupal

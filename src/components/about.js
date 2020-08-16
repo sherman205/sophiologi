@@ -80,7 +80,6 @@ const ImageWrapper = styled.div`
 const Image = styled(Img)`
   opacity: 0.6;
   border-radius: 5px;
-  z-index: -2;
   width: 100%;
 `;
 

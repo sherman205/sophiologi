@@ -9,6 +9,9 @@ const PortfolioContainer = styled.div`
   margin: 0 auto;
   padding: 10px 0 200px;
   max-width: 1000px;
+  ${media.bigDesktop`margin: 0 100px;`};
+  ${media.desktop`margin: 0 75px;`};
+  ${media.tablet`margin: 0 25px;`};
   ${media.tablet`padding: 20px 0 50px;`};
 `;
 
@@ -24,7 +27,6 @@ const PortfolioIconContainer = styled.div`
   display: flex;
   justify-content: center;
   padding-top: 20px;
-  ${media.tablet`display: block;`};
 `;
 
 const PortfolioItem = styled.div`
@@ -40,13 +42,12 @@ const PortfolioItem = styled.div`
   border-radius: 5px;
   transition: all 0.25s ease;
   background-color: ${props => (props.selected ? `${theme.colors.lightClay}` : '')};
-  border: ${props => (props.selected ? '1px solid black' : '')};
+  border: ${props => (props.selected ? '1px solid black' : `1px solid white`)};
   &:hover,
   &:focus {
     background-color: ${theme.colors.lightClay};
     border: 1px solid black;
   }
-  ${media.tablet`margin: 40px auto;`};
 `;
 
 const PortfolioHeading = styled.p`
@@ -78,7 +79,7 @@ class Portfolio extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      portfolioType: 'software'
+      portfolioType: this.props.location.state.type || 'software'
     };
   };
 

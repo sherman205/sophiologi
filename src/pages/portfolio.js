@@ -5,10 +5,10 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Portfolio from "../components/portfolio"
 
-const PortfolioPage = ( {data} ) => (
+const PortfolioPage = ( {data, location} ) => (
   <Layout>
     <SEO title="Portfolio" />
-    <Portfolio data={data}/>
+    <Portfolio data={data} location={location}/>
   </Layout>
 )
 
