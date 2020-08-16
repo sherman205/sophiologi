@@ -12,17 +12,9 @@ const LanguageContainer = styled.div`
   max-width: 1000px;
 `;
 
-const LanguageHeader = styled.h3`
-  margin: 0;
-  font-size: 30px;
-  font-family: Source Code Pro;
-  text-align: center;
-`;
-
 
 const Language = ( {data} ) => (
     <LanguageContainer>
-        <LanguageHeader>Language</LanguageHeader>
         <Experience data={data.experience.edges} type="language" />
         {/* <Projects data={data.featured.edges}/> */}
     </LanguageContainer>

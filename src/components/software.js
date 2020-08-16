@@ -14,13 +14,6 @@ const SoftwareContainer = styled.div`
   max-width: 1000px;
 `;
 
-const SoftwareHeader = styled.h3`
-  margin: 0;
-  font-size: 30px;
-  font-family: Source Code Pro;
-  text-align: center;
-`;
-
 const SoftwareMenuList = styled.ul`
   display: flex;
   justify-content: center;
@@ -63,7 +56,6 @@ class Software extends Component {
     const menuItems = ["Experience", "Skills", "Projects"];
     return (
         <SoftwareContainer>
-            <SoftwareHeader>Software</SoftwareHeader>
             <SoftwareMenuList>
             {menuItems.map((item, i) => (
                 <SoftwareMenuItem key={i} active={viewType} selected={viewType === item.toLowerCase() ? true : ''} onClick={() => this.selectMenuItem(item)}>{item}</SoftwareMenuItem>
