@@ -8,7 +8,7 @@ import Portfolio from "../components/portfolio"
 const PortfolioPage = ( {data} ) => (
   <Layout>
     <SEO title="Portfolio" />
-    <Portfolio data={data.portfolio.edges}/>
+    <Portfolio data={data}/>
   </Layout>
 )
 
@@ -16,24 +16,48 @@ export default PortfolioPage;
 
 export const query = graphql`
   {
-    portfolio: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/portfolio/" } }
+    experience: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/experience/" } }
       sort: { fields: [frontmatter___order], order: DESC }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            location
+            position
+            date
+            type
+            description
+          }
+        }
+      }
+    }
+    featured: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/featured/" } }
+      sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
         node {
           html
           frontmatter {
             title
-            quote
-            quoteAuthor
-            image {
-              childImageSharp {
-                fluid(maxWidth: 700, quality: 90) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
+            tech
+            github
+            live
+          }
+        }
+      }
+    }
+    skills: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/skills/" } }
+      sort: { fields: [frontmatter___order], order: ASC }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            tech
           }
         }
       }

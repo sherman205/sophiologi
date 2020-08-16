@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
+import Software from "./software"
 import { media } from "../styles/media"
 import { theme } from "../styles/theme"
 
@@ -18,6 +19,37 @@ const PortfolioHeader = styled.h3`
   font-size: 30px;
   font-family: Source Code Pro;
   ${media.tablet`font-size: 20px;`};
+`;
+
+const PortfolioIconContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  ${media.tablet`display: block;`};
+`;
+
+const PortfolioItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  max-width: 100px;
+  height: 30px;
+  padding: 2rem 2rem;
+  margin: 10px;
+  border-radius: 5px;
+  transition: all 0.25s ease;
+  &:hover,
+  &:focus {
+    background-color: ${theme.colors.lightClay};
+    border: 1px solid black;
+  }
+  ${media.tablet`margin: 40px auto;`};
+`;
+
+const PortfolioHeading = styled.p`
+  font-family: Source Code Pro;
+  font-size: 12px;
 `;
 
 const PortfolioItems = styled.div`
@@ -129,9 +161,9 @@ const Image = styled(Img)`
 
 const Linearicon = styled.span`
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   &:before {
-    font-size: 30px;
+    font-size: 25px;
   }
 `;
 
@@ -141,11 +173,34 @@ const PaperClipLinearicon = styled(Linearicon)`
   }
 `;
 
+const CodeLinearicon = styled(Linearicon)`
+  &:before {
+    content: "\\ec0b";
+  }
+`;
+
+const EarthLinearicon = styled(Linearicon)`
+  &:before {
+    content: "\\eb84";
+  }
+`;
+
 const Portfolio = ( {data} ) => {
   return (
     <PortfolioContainer>
       <PortfolioHeader>Portfolio</PortfolioHeader>
-      <PortfolioItems>
+      <PortfolioIconContainer>
+        <PortfolioItem>
+          <CodeLinearicon className="linearicons-code"></CodeLinearicon>
+          <PortfolioHeading>Software</PortfolioHeading>
+        </PortfolioItem>
+        <PortfolioItem>
+          <EarthLinearicon className="linearicons-earth"></EarthLinearicon>
+          <PortfolioHeading>Language</PortfolioHeading>
+        </PortfolioItem>
+      </PortfolioIconContainer>
+      <Software data={data}/>
+      {/* <PortfolioItems>
         {data.map(({ node }, i) => {
           const { frontmatter, html } = node;
           const { title, image, quote, quoteAuthor } = frontmatter;
@@ -170,7 +225,7 @@ const Portfolio = ( {data} ) => {
             </PortfolioLink>
           );
         })}
-      </PortfolioItems>
+      </PortfolioItems> */}
     </PortfolioContainer>
   );
 };
