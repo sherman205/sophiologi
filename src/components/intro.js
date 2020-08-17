@@ -13,6 +13,7 @@ const IntroContainer = styled.div`
   padding: 10px 0 250px;
   max-width: 1000px;
   ${media.tablet`padding: 20px 0 50px;`};
+  ${media.thone`margin: 0 25px;`};
 `;
 
 const IntroTextContainer = styled.div`
@@ -25,6 +26,7 @@ const IntroText = styled.div`
   display: flex;
   align-items: baseline;
   ${media.tablet`align-items: center;`};
+  ${media.tiny`display: block;`};
 `;
 
 const IntroTextTitle = styled.h3`
@@ -32,6 +34,7 @@ const IntroTextTitle = styled.h3`
   padding-right: 10px;
   ${media.tablet`font-size: 25px;`};
   ${media.tiny`font-size: 20px;`};
+  ${media.tiny`margin: 10px 0;`};
 `;
 
 const IntroTextName = styled.h1`
@@ -44,6 +47,7 @@ const IntroTextName = styled.h1`
     letter-spacing: 2px;
   }
   ${media.tablet`font-size: 50px;`};
+  ${media.tiny`margin: 10px 0;`};
 `;
 
 const IntroInfo = styled.div`
@@ -67,9 +71,7 @@ const IntroNounItem = styled.li`
   cursor: default;
   transition: all 0.5s ease;
   &:hover {
-    transition: all 0.25s ease;
     color: ${theme.colors.clay};
-    letter-spacing: 2px;
   }
 `;
 

@@ -36,6 +36,7 @@ const QuoteContainer = styled.div`
   border-radius: 5px;
   position: absolute;
   background-color: white;
+  z-index: 1;
   width: 300px;
   height: 300px;
   transition: visibility 0.3s linear,opacity 0.3s linear;

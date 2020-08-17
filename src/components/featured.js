@@ -10,6 +10,9 @@ const FeaturedContainer = styled.div`
   margin: 0 auto;
   padding: 80px 0 200px;
   max-width: 1000px;
+  ${media.bigDesktop`margin: 0 75px;`};
+  ${media.desktop`margin: 0 50px;`};
+  ${media.thone`margin: 0;`};
 `;
 
 const FeaturedHeader = styled.h3`
@@ -40,11 +43,7 @@ const Project = styled.div`
   &:focus {
     transform: translateX(10px);
   }
-  ${media.desktop`width: 75%;`};
-  ${media.tablet`width: 100%;`};
   ${media.tablet`align-items: center;`};
-  ${media.thone`width: 120%;`};
-  ${media.phone`width: 150%;`};
 `;
 
 const ProjectInfo = styled.div`
