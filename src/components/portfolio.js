@@ -79,9 +79,22 @@ class Portfolio extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      portfolioType: this.props.location.state.type ? this.props.location.state.type : 'software'
+      portfolioType: ''
     };
   };
+
+  componentDidMount() {
+    if (this.props.location.state && this.props.location.state.type) {
+      this.setState({
+        portfolioType: this.props.location.state.type
+      });
+    }
+    else{
+      this.setState({
+        portfolioType: 'software'
+      });
+    }
+  }
 
   selectPortfolioType = (item) => {
     this.setState({
@@ -94,23 +107,27 @@ class Portfolio extends Component {
     const { portfolioType } = this.state;
     return (
       <PortfolioContainer>
-        <PortfolioHeader>Portfolio</PortfolioHeader>
-        <PortfolioIconContainer>
-          <PortfolioItem active={portfolioType} selected={portfolioType === 'software' ? true : ''} onClick={() => this.selectPortfolioType('software')}>
-            <CodeLinearicon className="linearicons-code"></CodeLinearicon>
-            <PortfolioHeading>Software</PortfolioHeading>
-          </PortfolioItem>
-          <PortfolioItem active={portfolioType} selected={portfolioType === 'language' ? true : ''} onClick={() => this.selectPortfolioType('language')}>
-            <EarthLinearicon className="linearicons-earth"></EarthLinearicon>
-            <PortfolioHeading>Language</PortfolioHeading>
-          </PortfolioItem>
-        </PortfolioIconContainer>
-        {portfolioType === 'software' && (
-          <Software data={data} />
-        )}
-        {portfolioType === 'language' && (
-          <Language data={data} />
-        )}
+        {portfolioType &&
+          <React.Fragment>
+            <PortfolioHeader>Portfolio</PortfolioHeader>
+            <PortfolioIconContainer>
+              <PortfolioItem active={portfolioType} selected={portfolioType === 'software' ? true : ''} onClick={() => this.selectPortfolioType('software')}>
+                <CodeLinearicon className="linearicons-code"></CodeLinearicon>
+                <PortfolioHeading>Software</PortfolioHeading>
+              </PortfolioItem>
+              <PortfolioItem active={portfolioType} selected={portfolioType === 'language' ? true : ''} onClick={() => this.selectPortfolioType('language')}>
+                <EarthLinearicon className="linearicons-earth"></EarthLinearicon>
+                <PortfolioHeading>Language</PortfolioHeading>
+              </PortfolioItem>
+            </PortfolioIconContainer>
+            {portfolioType === 'software' && (
+              <Software data={data} />
+            )}
+            {portfolioType === 'language' && (
+              <Language data={data} />
+            )}
+          </React.Fragment>
+        }
       </PortfolioContainer>
     );
   }
