@@ -3,7 +3,7 @@ order: '3'
 title: Cambia Health Solutions
 location: Portland, OR
 position: Software Engineer II
-date: 04/2019 – Present
+date: 04/2019 – 10/2020
 type: 'software'
 description:
   - Architect, build, and automate quality-centric infrastructure, tools and processes to better support team ownership of test coverage best practices
